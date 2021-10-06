@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InputManager : MonoBehaviour
+public class InputManager : UnitInputs
 {
     ///Handles the players input
     
-    public Vector2 inputVector;
-    public bool jumpInput;
+
+    public bool shootHoldInput;
+    public bool shootReleaseInput;
 
     public void Update()
     {

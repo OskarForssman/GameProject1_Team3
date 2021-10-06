@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
 
     #region References
 
-    InputManager input;
+    UnitInputs input;
     CharacterController controller;
 
     #endregion
@@ -56,18 +56,10 @@ public class PlayerMovement : MonoBehaviour
 
     public void Awake()
     {
-        input = GetComponent<InputManager>();
+        input = GetComponent<UnitInputs>();
         controller = GetComponent<CharacterController>();
     }
 
-    public void OnDrawGizmos()
-    {
-        CharacterController bruh = GetComponent<CharacterController>();
-        float offset = bruh.height / 2 - bruh.radius / 2;
-        Vector3 sphereLocation = transform.position + Vector3.down * offset;
-        Gizmos.DrawWireSphere(sphereLocation, bruh.radius);
-
-    }
 
     #endregion
 
@@ -77,15 +69,13 @@ public class PlayerMovement : MonoBehaviour
         ///Returns a bool by spherecasting beneath the charactercontroller to more elegantly groundcheck 
     {
         Ray downRay = new Ray(transform.position, Vector3.down);
-        if (Physics.SphereCast(downRay, controller.radius, controller.height/2, groundLayerMask)) //Projects a sphere straight down at the bottom of the controller collider
+        float groundCheckLength = controller.height / 2 - controller.radius + controller.skinWidth + 0.01f; //Positions the bubble to be just below the charactercontroller bottom capsule collider ball
+        if (Physics.SphereCast(downRay, controller.radius, groundCheckLength, groundLayerMask)) //Projects a sphere straight down at the bottom of the controller collider
         {
-            Debug.Log("Ground!");
             return true;
-            
         }
         else
         {
-            Debug.Log("Air!");
             return false;
         }
     }
@@ -101,7 +91,10 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!grounded)
         {
-            velocity.y -= gravity * Time.deltaTime;
+            if (velocity.y > -maxFallSpeed)
+            {
+                velocity.y -= gravity * Time.deltaTime;
+            }
         }
         else
         {
@@ -123,6 +116,8 @@ public class PlayerMovement : MonoBehaviour
         ///Applies velocity via the characterController move method. This method is put late in the update method
     {
         controller.Move(velocity * Time.deltaTime);
+        Vector3 pos = new Vector3(transform.position.x, transform.position.y, 0);
+        transform.position = pos;
     }
 
     #endregion
