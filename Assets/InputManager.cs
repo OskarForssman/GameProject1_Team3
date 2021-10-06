@@ -15,5 +15,7 @@ public class InputManager : UnitInputs
         inputVector.x = Input.GetAxisRaw("Horizontal");
         inputVector.y = Input.GetAxisRaw("Vertical");
         jumpInput = Input.GetKeyDown(KeyCode.Space);
+        spawnBubblebehind = Input.GetKeyDown(KeyCode.F1);
+        spawnBubbleforward = Input.GetKeyDown(KeyCode.F2);
     }
 }
