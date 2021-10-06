@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SimpleAIInputManager : UnitInputs
 {
+    ///Simple AI function that moves back and forth
+
     [SerializeField] private LayerMask groundLayerMask;
 
     public void Start()
