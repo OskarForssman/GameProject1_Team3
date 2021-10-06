@@ -120,5 +120,12 @@ public class PlayerMovement : MonoBehaviour
         transform.position = pos;
     }
 
+    public void Bounce(float _bounciness)
+        ///Adds vertical velocity, TODO: Add a very brief bounce cooldown!
+    {
+        velocity.y = _bounciness;
+        Debug.Log("BOING");
+    }
+
     #endregion
 }

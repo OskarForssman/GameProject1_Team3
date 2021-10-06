@@ -325,6 +325,7 @@ GameObject:
   - component: {fileID: 1361612715}
   - component: {fileID: 1361612714}
   - component: {fileID: 1361612718}
+  - component: {fileID: 1361612713}
   - component: {fileID: 1361612712}
   - component: {fileID: 1361612717}
   m_Layer: 3
@@ -351,6 +352,19 @@ MonoBehaviour:
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &1361612713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361612711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b7041711bf7344fac722e3ba552c0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  team: 1
 --- !u!23 &1361612714
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -735,7 +749,9 @@ GameObject:
   - component: {fileID: 1924816078}
   - component: {fileID: 1924816077}
   - component: {fileID: 1924816076}
+  - component: {fileID: 1924816079}
   - component: {fileID: 1924816075}
+  - component: {fileID: 1924816080}
   - component: {fileID: 1924816074}
   m_Layer: 3
   m_Name: Player
@@ -862,3 +878,32 @@ Transform:
   m_Father: {fileID: 1670120783}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1924816079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924816073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b7041711bf7344fac722e3ba552c0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  team: 0
+--- !u!114 &1924816080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924816073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f79eaa5666be05e41a23b445a3e131fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitLayerMask:
+    serializedVersion: 2
+    m_Bits: 8
+  bounciness: 15
