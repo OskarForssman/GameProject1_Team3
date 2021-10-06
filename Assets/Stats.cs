@@ -9,5 +9,15 @@ public class Stats : MonoBehaviour
         player,
         enemy
     }
-    public Team team = Team.player;
+    public Team team = Team.player; //What team said thing is on
+
+    private int health;
+
+    public float bounceCooldown; //The brief period you cannot bounce on something
+
+    public void TakeDamage(int _DMGAmount)
+    {
+        health -= _DMGAmount;
+        Debug.Log(health);
+    }
 }
