@@ -136,7 +136,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Bounce(float _bounciness)
     {
-        velocity.y -= _bounciness;
+        velocity.y = _bounciness;
     }
 
     #endregion

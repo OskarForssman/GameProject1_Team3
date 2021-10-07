@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 7701884690343755762}
   - component: {fileID: -4969729909812857581}
   - component: {fileID: 6089912700858679718}
-  m_Layer: 6
+  - component: {fileID: -784007586119150479}
+  m_Layer: 3
   m_Name: Bubble
   m_TagString: Bubble
   m_Icon: {fileID: 0}
@@ -125,3 +126,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd7cb93d76bd2d242a36df621bb2b885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-784007586119150479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7701884690343755763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b7041711bf7344fac722e3ba552c0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  team: 1
+  health: 1
+  bounceCooldown: 0

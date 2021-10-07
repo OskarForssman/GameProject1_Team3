@@ -11,13 +11,17 @@ public class Stats : MonoBehaviour
     }
     public Team team = Team.player; //What team said thing is on
 
-    private int health;
+    [SerializeField] int health;
 
     public float bounceCooldown; //The brief period you cannot bounce on something
 
     public void TakeDamage(int _DMGAmount)
     {
         health -= _DMGAmount;
-        Debug.Log(health);
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+            Debug.Log("Pop");
+        }
     }
 }

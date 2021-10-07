@@ -328,7 +328,6 @@ GameObject:
   - component: {fileID: 1361612712}
   - component: {fileID: 1361612717}
   - component: {fileID: 1361612719}
-  - component: {fileID: 1361612713}
   m_Layer: 3
   m_Name: Enemy
   m_TagString: Untagged
@@ -355,22 +354,6 @@ MonoBehaviour:
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 64
---- !u!114 &1361612713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1361612711}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f79eaa5666be05e41a23b445a3e131fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unitLayerMask:
-    serializedVersion: 2
-    m_Bits: 8
-  bounciness: 15
 --- !u!23 &1361612714
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -486,6 +469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 1
+  health: 1
   bounceCooldown: 0
 --- !u!1 &1433602300
 GameObject:
@@ -771,6 +755,7 @@ GameObject:
   - component: {fileID: 1924816078}
   - component: {fileID: 1924816077}
   - component: {fileID: 1924816076}
+  - component: {fileID: 1924816081}
   - component: {fileID: 1924816075}
   - component: {fileID: 1924816080}
   - component: {fileID: 1924816074}
@@ -929,4 +914,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 0
+  health: 3
   bounceCooldown: 0
+--- !u!114 &1924816081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924816073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f79eaa5666be05e41a23b445a3e131fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitLayerMask:
+    serializedVersion: 2
+    m_Bits: 8
+  bounciness: 15
