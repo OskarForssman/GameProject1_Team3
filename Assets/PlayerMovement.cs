@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     #region Private Variables
 
     public Vector2 velocity; 
-    private bool grounded;
+    public bool grounded;
 
     #region References
 

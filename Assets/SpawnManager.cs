@@ -16,6 +16,7 @@ public class SpawnManager : MonoBehaviour
 
     private Vector2[] SetSpawnPoints(Transform _spawnPointFolder)
         //Returns spawnpoints as Vector2s with given transform/folder that has its own children
+        //God fuckin dammit it keeps returning the 0 index with just a 000
     {
         Transform[] childTransforms = _spawnPointFolder.GetComponentsInChildren<Transform>();
         Vector2[] _spawnPoints = new Vector2[childTransforms.Length];
@@ -28,7 +29,7 @@ public class SpawnManager : MonoBehaviour
 
     public void SpawnEnemy(Wave _wave)
     {
-        int randomIndex = Random.Range(0, spawnPoints.Length);
+        int randomIndex = Random.Range(1, spawnPoints.Length);
         //Instantiates a random prefab(IT'S NOT RANDOM YET) at a random SpawnPoint
         GameObject gam = Instantiate(GetRandomEnemy(_wave), spawnPoints[randomIndex], Quaternion.identity);
     }
@@ -37,29 +38,47 @@ public class SpawnManager : MonoBehaviour
     {
         float totalWeight = 0;
         //Add the total weight in the enemyPrefabList
-        for (int i = 0; i < _wave.enemyPrefabList.Length; i++)
+        foreach (var enemy in _wave.enemyPrefabList)
         {
-            totalWeight += _wave.enemyPrefabList[i].weight;
+            totalWeight += enemy.weight;
         }
 
         //Randomizes a value between 0 and the totalWeight
         float randomWeight = Random.Range(0, totalWeight);
 
         //
-        for (int i = 0; i < _wave.enemyPrefabList.Length - 1; i++)
+        /*
+        for (int i = 0; i < _wave.enemyPrefabList.Length; i++)
         {
-            if (_wave.enemyPrefabList[i].weight > randomWeight)
+            if (_wave.enemyPrefabList[i].weight <= randomWeight)
             {
                 return _wave.enemyPrefabList[i].prefab;
             }
         }
-        return null;
+        */
+        
+        
+        foreach (var _enemy in _wave.enemyPrefabList)
+        {
+            if (_enemy.weight >= randomWeight)
+            {
+                return _enemy.prefab;
+            }
+            else
+            {
+                randomWeight -= _enemy.weight;
+            }
+        }
+        
+        //If all else it will retrieve the last instance in the prefab list
+        return _wave.enemyPrefabList[_wave.enemyPrefabList.Length-1].prefab;
         
     }
 
     public void Awake()
     {
         waveManager = GetComponent<WaveManager>();
+
     }
 
     public void Start()
