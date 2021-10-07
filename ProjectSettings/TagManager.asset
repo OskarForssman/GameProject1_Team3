@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bubble
+  - Enviroment
   layers:
   - Default
   - TransparentFX
