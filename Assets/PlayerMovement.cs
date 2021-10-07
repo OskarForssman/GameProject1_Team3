@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
     #region Private Variables
 
-    private Vector2 velocity; 
+    public Vector2 velocity; 
     private bool grounded;
 
     #region References
@@ -132,6 +132,11 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
         Vector3 pos = new Vector3(transform.position.x, transform.position.y, 0);
         transform.position = pos;
+    }
+
+    public void Bounce(float _bounciness)
+    {
+        velocity.y -= _bounciness;
     }
 
     #endregion

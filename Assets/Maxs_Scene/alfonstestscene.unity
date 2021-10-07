@@ -436,6 +436,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   bubble: {fileID: 0}
+  velocity: {x: 0, y: 0}
 --- !u!143 &1361612718
 CharacterController:
   m_ObjectHideFlags: 0
@@ -768,6 +769,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   bubble: {fileID: 7701884690343755763, guid: 39e5e32c3bc0b3e42ae06c05534420fb, type: 3}
+  velocity: {x: 0, y: 0}
 --- !u!114 &1924816075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -878,6 +880,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1924816073}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d82ecfb880365584abb0a6dffecb27b1, type: 3}
+  m_Script: {fileID: 11500000, guid: dd7cb93d76bd2d242a36df621bb2b885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
