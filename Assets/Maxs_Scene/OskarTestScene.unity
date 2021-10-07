@@ -563,9 +563,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24b7041711bf7344fac722e3ba552c0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  team: 1
   health: 1
   bounceCooldown: 0
-  team: 1
 --- !u!1 &1433602300
 GameObject:
   m_ObjectHideFlags: 0
@@ -947,9 +947,9 @@ GameObject:
   - component: {fileID: 1924816078}
   - component: {fileID: 1924816077}
   - component: {fileID: 1924816076}
+  - component: {fileID: 1924816081}
   - component: {fileID: 1924816075}
   - component: {fileID: 1924816080}
-  - component: {fileID: 1924816081}
   - component: {fileID: 1924816074}
   - component: {fileID: 1924816079}
   - component: {fileID: 1924816082}
@@ -1106,9 +1106,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24b7041711bf7344fac722e3ba552c0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  team: 0
   health: 3
   bounceCooldown: 0
-  team: 0
 --- !u!114 &1924816081
 MonoBehaviour:
   m_ObjectHideFlags: 0
