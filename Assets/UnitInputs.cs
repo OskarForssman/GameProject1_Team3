@@ -8,4 +8,6 @@ public abstract class UnitInputs : MonoBehaviour
 
     public Vector2 inputVector;
     public bool jumpInput;
+    public bool spawnBubblebehind;
+    public bool spawnBubbleforward;
 }

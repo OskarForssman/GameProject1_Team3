@@ -15,15 +15,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float maxFallSpeed;
 
     [SerializeField] private LayerMask groundLayerMask;
-
-    public Vector2 velocity;
-
+    [SerializeField] private GameObject bubble;
     #endregion
 
 
     #region Private Variables
 
-
+    private Vector2 velocity; 
     private bool grounded;
 
     #region References
@@ -42,6 +40,14 @@ public class PlayerMovement : MonoBehaviour
     {
         
         Movement(input.inputVector.x);
+        if (input.spawnBubblebehind)
+        {
+            spawnBubble(-1);
+        }
+        if (input.spawnBubbleforward)
+        {
+            spawnBubble(1);
+        }
 
         grounded = GroundCheck();
         if (grounded)
@@ -82,6 +88,12 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void spawnBubble(int x)
+    {
+
+        Instantiate(bubble, new Vector2(transform.position.x+x, transform.position.y), transform.rotation);
+
+    }
     public void Movement(float _verticalInput)
         ///Sets horizontal velocity depending on given input
     {
@@ -120,13 +132,6 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
         Vector3 pos = new Vector3(transform.position.x, transform.position.y, 0);
         transform.position = pos;
-    }
-
-    public void Bounce(float _bounciness)
-        ///Adds vertical velocity, TODO: Add a very brief bounce cooldown!
-    {
-        velocity.y = _bounciness;
-        Debug.Log("BOING");
     }
 
     #endregion
