@@ -48,7 +48,7 @@ public class SpawnManager : MonoBehaviour
         //
         for (int i = 0; i < _wave.enemyPrefabList.Length - 1; i++)
         {
-            if (_wave.enemyPrefabList[i].weight < randomWeight && _wave.enemyPrefabList[i+1].weight >= randomWeight)
+            if (_wave.enemyPrefabList[i].weight > randomWeight)
             {
                 return _wave.enemyPrefabList[i].prefab;
             }
