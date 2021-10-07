@@ -8,14 +8,14 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Ground Stats:")]
     [SerializeField] private float moveSpeed;
-
+  
     [Header("Aerial Stats:")]
     [SerializeField] private float jumpSpeed;
     [SerializeField] private float gravity;
     [SerializeField] private float maxFallSpeed;
 
     [SerializeField] private LayerMask groundLayerMask;
-    [SerializeField] private GameObject bubble;
+  
     #endregion
 
 
@@ -40,14 +40,7 @@ public class PlayerMovement : MonoBehaviour
     {
         
         Movement(input.inputVector.x);
-        if (input.spawnBubblebehind)
-        {
-            spawnBubble(-1);
-        }
-        if (input.spawnBubbleforward)
-        {
-            spawnBubble(1);
-        }
+     
 
         grounded = GroundCheck();
         if (grounded)
@@ -88,12 +81,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void spawnBubble(int x)
-    {
-
-        Instantiate(bubble, new Vector2(transform.position.x+x, transform.position.y), transform.rotation);
-
-    }
+  
     public void Movement(float _verticalInput)
         ///Sets horizontal velocity depending on given input
     {

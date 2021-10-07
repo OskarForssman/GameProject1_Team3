@@ -10,4 +10,5 @@ public abstract class UnitInputs : MonoBehaviour
     public bool jumpInput;
     public bool spawnBubblebehind;
     public bool spawnBubbleforward;
+    public bool shootReflectBubble;
 }
