@@ -9,7 +9,7 @@ public class Stats : MonoBehaviour
 
     public float bounceCooldown; //The brief period you cannot bounce on something
 
-    event Action deathEvent; //WaveManager subscribes to this event and reduce the enemy counter
+    //event Action deathEvent; //WaveManager subscribes to this event and reduce the enemy counter
 
     public enum Team
     {
@@ -31,7 +31,7 @@ public class Stats : MonoBehaviour
 
     public void Die()
     {
-        deathEvent.Invoke();
+        //deathEvent.Invoke();
         Destroy(gameObject);
     }
 }
