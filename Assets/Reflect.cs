@@ -17,7 +17,7 @@ public class Reflect : MonoBehaviour
             Vector2 pos = collision.collider.ClosestPoint(transform.position).normalized;
             Vector3 newDirection=Vector3.Reflect(collision.collider.ClosestPoint(transform.position), pos);
             ShootBubble bulletz = GetComponent<ShootBubble>();
-            bulletz.shoot(newDirection);
+            bulletz.shoot(newDirection,2);
             Debug.Log(newDirection);
             myDir = newDirection;
            

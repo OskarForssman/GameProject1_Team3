@@ -9,13 +9,13 @@ public class ShootBubble : MonoBehaviour
    
 
 
-    public void shoot(Vector3 direction)
+    public void shoot(Vector3 direction,int speed)
     {
 
 
 
 
-        rigid.AddForce(direction*5,ForceMode.VelocityChange);
+        rigid.AddForce(direction*speed,ForceMode.VelocityChange);
       
 
     }
