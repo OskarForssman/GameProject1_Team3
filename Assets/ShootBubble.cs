@@ -15,7 +15,7 @@ public class ShootBubble : MonoBehaviour
 
 
 
-        rigid.AddForce(direction,ForceMode.VelocityChange);
+        rigid.AddForce(direction*5,ForceMode.VelocityChange);
       
 
     }
