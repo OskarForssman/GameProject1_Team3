@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc3bb7a7b59a60842b6994eecbd8af67, type: 3}
   m_Name: SnailWave
   m_EditorClassIdentifier: 
+  timeToCompleteWave: 0
   enemiesPerWave: 3
   enemySpawnInterval: 1
   enemyPrefabList:
@@ -20,5 +21,5 @@ MonoBehaviour:
   - prefab: {fileID: 172022398957693110, guid: 70677da9dddaff9499e2b5693f8e838b, type: 3}
     weight: 5
   - prefab: {fileID: 8734954354809780686, guid: 1fe509fd7a3a1d34a80692bf86021586, type: 3}
-    weight: 1
+    weight: 5
   spawnPointFolder: {fileID: 0}

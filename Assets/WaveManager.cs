@@ -37,4 +37,19 @@ public class WaveManager : MonoBehaviour
         spawning = GetComponent<SpawnManager>();
     }
 
+    public void Start()
+    {
+        SetWave(0);
+        
+    }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            spawning.SpawnEnemy(currentWave);
+            Debug.Log("omg haiii");
+        }
+    }
+
 }
