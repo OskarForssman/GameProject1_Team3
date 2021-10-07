@@ -28,7 +28,7 @@ public class BounceAbility : MonoBehaviour
         if (Physics.SphereCast(transform.position, controller.radius, Vector3.down, out hit, groundCheckLength, unitLayerMask)) //Projects a sphere straight down at the bottom of the controller collider
         {
             //Compares the raycastHits team in the Stats class to tell if you arent on the same team to allow a bounce
-            if (hit.transform.GetComponent<Stats>())
+            if (movement.velocity.y < 0 && hit.transform.GetComponent<Stats>())
             {
                 Stats s = hit.transform.GetComponent<Stats>();
                 if (s.team.CompareTo(stats.team) != 0)

@@ -14,14 +14,16 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float gravity;
     [SerializeField] private float maxFallSpeed;
 
-    [SerializeField] private LayerMask groundLayerMask; 
+    [SerializeField] private LayerMask groundLayerMask;
+
+    public Vector2 velocity;
 
     #endregion
 
 
     #region Private Variables
 
-    private Vector2 velocity; 
+
     private bool grounded;
 
     #region References
