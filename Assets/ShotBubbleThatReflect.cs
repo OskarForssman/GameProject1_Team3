@@ -48,7 +48,7 @@ public class ShotBubbleThatReflect : MonoBehaviour
 
             Vector2 mypos = transform.position;
             Vector3 directionVector = (mousepos - mypos).normalized;
-        Debug.Log(directionVector);
+       
         ShootBubble  bulletz = Instantiate(smallbubble, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y), gameObject.transform.rotation)?.GetComponent<ShootBubble>();
             bulletz.shoot(directionVector);
         
