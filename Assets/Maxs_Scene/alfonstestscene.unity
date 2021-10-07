@@ -327,6 +327,8 @@ GameObject:
   - component: {fileID: 1361612718}
   - component: {fileID: 1361612712}
   - component: {fileID: 1361612717}
+  - component: {fileID: 1361612719}
+  - component: {fileID: 1361612713}
   m_Layer: 3
   m_Name: Enemy
   m_TagString: Untagged
@@ -353,6 +355,22 @@ MonoBehaviour:
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &1361612713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361612711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f79eaa5666be05e41a23b445a3e131fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitLayerMask:
+    serializedVersion: 2
+    m_Bits: 8
+  bounciness: 15
 --- !u!23 &1361612714
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -455,6 +473,20 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1361612719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361612711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b7041711bf7344fac722e3ba552c0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  team: 1
+  bounceCooldown: 0
 --- !u!1 &1433602300
 GameObject:
   m_ObjectHideFlags: 0
@@ -740,6 +772,7 @@ GameObject:
   - component: {fileID: 1924816077}
   - component: {fileID: 1924816076}
   - component: {fileID: 1924816075}
+  - component: {fileID: 1924816080}
   - component: {fileID: 1924816074}
   - component: {fileID: 1924816079}
   m_Layer: 3
@@ -845,7 +878,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -883,3 +916,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd7cb93d76bd2d242a36df621bb2b885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1924816080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924816073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b7041711bf7344fac722e3ba552c0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  team: 0
+  bounceCooldown: 0
