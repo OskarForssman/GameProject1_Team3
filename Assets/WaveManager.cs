@@ -21,12 +21,13 @@ public class WaveManager : MonoBehaviour
     private float timeLeftOfWave; //How long until you lose the wave
     private Wave currentWave; //The data for the current wave
 
+
     IEnumerator SpawnIntervalCoroutine(float _spawnInterval)
     {
         while (3 == 3)
         {
             yield return new WaitForSeconds(0.1f);
-            while (enemiesOnScreen <= currentWave.enemiesOnScreen)
+            while (enemiesOnScreen <= currentWave.enemiesOnScreen && enemiesLeft >= 0)
             {
                 yield return new WaitForSeconds(_spawnInterval);
                 spawning.SpawnEnemy(currentWave);
@@ -48,7 +49,6 @@ public class WaveManager : MonoBehaviour
 
     private void SetWave(int _waveIndex)
     {
-
         currentWave = waveList[_waveIndex];
         timeLeftOfWave = currentWave.timeToCompleteWave;
         enemiesLeft = currentWave.enemiesPerWave;
@@ -66,7 +66,7 @@ public class WaveManager : MonoBehaviour
     {
         enemiesLeft--;
         enemiesOnScreen--;
-        if (enemiesLeft <= 0)
+        if (enemiesLeft <= 0 && enemiesOnScreen <= 0)
         {
             NextWave();
         }
@@ -84,12 +84,5 @@ public class WaveManager : MonoBehaviour
         
     }
 
-    public void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            spawning.SpawnEnemy(currentWave);
-        }
-    }
 
 }
