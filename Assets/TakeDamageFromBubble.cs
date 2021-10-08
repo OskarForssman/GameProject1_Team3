@@ -6,8 +6,9 @@ public class TakeDamageFromBubble : MonoBehaviour
 {
     Stats stats;
     SimpleAIInputManager ai;
-    [SerializeField] public float StunBigbubblehowlong = 2F;
-    private float nextFire = 0.0F;
+  
+ 
+    float input;
     private void Awake()
     {
         stats = GetComponent<Stats>();
@@ -28,16 +29,22 @@ public class TakeDamageFromBubble : MonoBehaviour
 
         if (collision.transform.tag == "BigBubble")
         {
-          
-            GetComponent <SimpleAIInputManager> ().enabled = false;
-            ai.inputVector.x = 0;
-            if (Time.time > nextFire)
-            {
-                nextFire = Time.time + StunBigbubblehowlong;
-              
 
-            }
+             input = ai.inputVector.x;
+            ai.inputVector.x = 0;
+            StartCoroutine(ExecuteAfterTime(2));
+
+
+
+
         }
+
+    }
+    IEnumerator ExecuteAfterTime(float time)
+    {
+        yield return new WaitForSeconds(time);
+        ai.inputVector.x = input;
+
 
     }
 }
