@@ -23,19 +23,23 @@ public class SimpleAIInputManager : UnitInputs
     public void Update()
     {
 
-        
+       
+       
        
         Ray ray = new Ray(transform.position, Vector2.right * inputVector.x);
         if (Physics.Raycast(ray, 1f, groundLayerMask))
         {
-            
-                inputVector.x *= -1;
+
+              inputVector.x *= -1;
+           
+
             
             
             
         }
-
         
+
+
     }
 
   

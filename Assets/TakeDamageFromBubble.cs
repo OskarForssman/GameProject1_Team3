@@ -30,12 +30,11 @@ public class TakeDamageFromBubble : MonoBehaviour
         {
           
             GetComponent <SimpleAIInputManager> ().enabled = false;
-         
-            if(Time.time > nextFire)
+            ai.inputVector.x = 0;
+            if (Time.time > nextFire)
             {
                 nextFire = Time.time + StunBigbubblehowlong;
-                GetComponent<SimpleAIInputManager>().enabled = true;
-               
+              
 
             }
         }
