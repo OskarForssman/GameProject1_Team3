@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 8912986129656534381}
   m_Layer: 7
   m_Name: Bubble
-  m_TagString: Bubble
+  m_TagString: BigBubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -155,3 +155,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79cf404dd4805cc419b1d6df3eda0b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  body: {fileID: -4969729909812857581}

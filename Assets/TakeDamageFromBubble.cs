@@ -5,10 +5,13 @@ using UnityEngine;
 public class TakeDamageFromBubble : MonoBehaviour
 {
     Stats stats;
-
+    SimpleAIInputManager ai;
+    [SerializeField] public float StunBigbubblehowlong = 2F;
+    private float nextFire = 0.0F;
     private void Awake()
     {
         stats = GetComponent<Stats>();
+         ai = GetComponent<SimpleAIInputManager>();
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -25,11 +28,16 @@ public class TakeDamageFromBubble : MonoBehaviour
 
         if (collision.transform.tag == "BigBubble")
         {
-            Stats s = transform.GetComponent<Stats>();
+          
+            GetComponent <SimpleAIInputManager> ().enabled = false;
+         
+            if(Time.time > nextFire)
+            {
+                nextFire = Time.time + StunBigbubblehowlong;
+                GetComponent<SimpleAIInputManager>().enabled = true;
+               
 
-
-            s.TakeDamage(1);
-
+            }
         }
 
     }

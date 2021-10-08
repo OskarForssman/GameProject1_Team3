@@ -8,10 +8,12 @@ public class Fly : MonoBehaviour
 
     Vector3 f = Vector3.up;
 
+    [SerializeField] Rigidbody body;
+
     void Update()
     {
 
-        gameObject.transform.Translate(f * 1.1f * Time.deltaTime, Space.World);
+        body.AddRelativeForce(f * Time.deltaTime, ForceMode.VelocityChange);
 
     }
 
