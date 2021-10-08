@@ -5,6 +5,8 @@ using UnityEngine;
 public class BreakBubble : MonoBehaviour
 {
     public float bubblepopinthisamountofsec = 5f;
+
+   
     private void Update()
     {
         Destroy(gameObject, bubblepopinthisamountofsec);
@@ -19,6 +21,7 @@ public class BreakBubble : MonoBehaviour
         */
         if (collision.transform.tag == "Enemy")
         {
+
             Debug.Log("hit enemy");
 
             Destroy(gameObject);
