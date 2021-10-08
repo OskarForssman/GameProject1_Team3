@@ -11,6 +11,7 @@ public class WaveManager : MonoBehaviour
     public Wave[] waveList; //This is not a wave list, this is a wave array!! Preposterous
     public int enemiesLeft; //How many enemies that need to be defeated until next wave
     public int enemiesOnScreen;
+    public float timeLeftOfWave; //How long until you lose the wave
 
     #endregion
 
@@ -18,7 +19,7 @@ public class WaveManager : MonoBehaviour
     #region Private Variables
 
     private int waveIndex = 0; //What wave is it right now
-    private float timeLeftOfWave; //How long until you lose the wave
+    
     private Wave currentWave; //The data for the current wave
 
 
@@ -80,8 +81,15 @@ public class WaveManager : MonoBehaviour
     public void Start()
     {
         WaveSetUp();
+    }
 
-        
+    public void Update()
+    {
+        timeLeftOfWave -= Time.deltaTime;
+        if (timeLeftOfWave <= 0)
+        {
+            Debug.Log("Times up!");
+        }
     }
 
 
