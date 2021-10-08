@@ -1824,7 +1824,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bubble: {fileID: 7701884690343755763, guid: 39e5e32c3bc0b3e42ae06c05534420fb, type: 3}
-  fireRate: 2
+  fireRateInsecbig: 2
+  fireRateInsecSmall: 0.2
   cam: {fileID: 1433602302}
   smallbubble: {fileID: 7701884690343755763, guid: 2ac72cfff3c7aa34f9c9b95651c187dd, type: 3}
 --- !u!1 &2003986483
@@ -1858,7 +1859,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveList:
-  - {fileID: 11400000, guid: 1b66c8525a8e8ba44afeca24f6cd3b6f, type: 2}
+  - {fileID: 11400000, guid: 7ffc4295295ad9748892ab107af9054e, type: 2}
+  - {fileID: 11400000, guid: dd82536c2e679da43b4ec452181b1c60, type: 2}
   - {fileID: 11400000, guid: dd82536c2e679da43b4ec452181b1c60, type: 2}
   enemiesLeft: 0
   enemiesOnScreen: 0
