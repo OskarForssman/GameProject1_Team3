@@ -452,6 +452,7 @@ MonoBehaviour:
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 64
+  moveornot: 0
 --- !u!114 &1361612713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -547,6 +548,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   velocity: {x: 0, y: 0}
+  grounded: 0
 --- !u!143 &1361612718
 CharacterController:
   m_ObjectHideFlags: 0
@@ -577,7 +579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24b7041711bf7344fac722e3ba552c0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 10
   bounceCooldown: 0
   team: 1
 --- !u!136 &1361612720
@@ -1007,6 +1009,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   velocity: {x: 0, y: 0}
+  grounded: 0
 --- !u!114 &1924816075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1156,4 +1159,4 @@ MonoBehaviour:
   fireRateInsecbig: 2
   fireRateInsecSmall: 0.2
   cam: {fileID: 1433602302}
-  smallbubble: {fileID: 7701884690343755763, guid: 2ac72cfff3c7aa34f9c9b95651c187dd, type: 3}
+  smallbubble: {fileID: 7701884690343755763, guid: f2c90ec9eadc38b438f32689f49364e5, type: 3}
