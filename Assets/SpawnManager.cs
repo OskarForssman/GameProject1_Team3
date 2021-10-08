@@ -16,7 +16,6 @@ public class SpawnManager : MonoBehaviour
 
     private Vector2[] SetSpawnPoints(Transform _spawnPointFolder)
         //Returns spawnpoints as Vector2s with given transform/folder that has its own children
-        //God fuckin dammit it keeps returning the 0 index with just a 000
     {
         Transform[] childTransforms = _spawnPointFolder.GetComponentsInChildren<Transform>();
         Vector2[] _spawnPoints = new Vector2[childTransforms.Length];
@@ -30,8 +29,12 @@ public class SpawnManager : MonoBehaviour
     public void SpawnEnemy(Wave _wave)
     {
         int randomIndex = Random.Range(1, spawnPoints.Length);
-        //Instantiates a random prefab(IT'S NOT RANDOM YET) at a random SpawnPoint
+        waveManager.enemiesOnScreen++;
+        
         GameObject gam = Instantiate(GetRandomEnemy(_wave), spawnPoints[randomIndex], Quaternion.identity);
+        Stats _stats = gam.GetComponent<Stats>();
+        _stats.deathEvent += waveManager.ReduceEnemyCount;
+    
     }
 
     private GameObject GetRandomEnemy(Wave _wave)
@@ -46,18 +49,7 @@ public class SpawnManager : MonoBehaviour
         //Randomizes a value between 0 and the totalWeight
         float randomWeight = Random.Range(0, totalWeight);
 
-        //
-        /*
-        for (int i = 0; i < _wave.enemyPrefabList.Length; i++)
-        {
-            if (_wave.enemyPrefabList[i].weight <= randomWeight)
-            {
-                return _wave.enemyPrefabList[i].prefab;
-            }
-        }
-        */
-        
-        
+        //Checks the rolled weight through the prefab List
         foreach (var _enemy in _wave.enemyPrefabList)
         {
             if (_enemy.weight >= randomWeight)

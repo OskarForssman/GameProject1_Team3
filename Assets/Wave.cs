@@ -13,6 +13,9 @@ public class Wave : ScriptableObject
     [Tooltip("How many enemies will spawn from this wave")]
     public int enemiesPerWave;
 
+    [Tooltip("How many enemies can exist on screen at the same time")]
+    public int enemiesOnScreen;
+
     [Tooltip("The time interval between enemy spawns")]
     public float enemySpawnInterval;
 

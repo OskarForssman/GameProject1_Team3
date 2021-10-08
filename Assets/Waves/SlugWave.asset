@@ -13,13 +13,10 @@ MonoBehaviour:
   m_Name: SlugWave
   m_EditorClassIdentifier: 
   timeToCompleteWave: 0
-  enemiesPerWave: 20
+  enemiesPerWave: 4
+  enemiesOnScreen: 2
   enemySpawnInterval: 0.5
   enemyPrefabList:
   - prefab: {fileID: 1322360153364226967, guid: 3477f38801859dd4d961f4123b9c15ef, type: 3}
-    weight: 60
-  - prefab: {fileID: 8734954354809780686, guid: 1fe509fd7a3a1d34a80692bf86021586, type: 3}
-    weight: 1
-  - prefab: {fileID: 172022398957693110, guid: 70677da9dddaff9499e2b5693f8e838b, type: 3}
-    weight: 10
+    weight: 30
   spawnPointFolder: {fileID: 0}
