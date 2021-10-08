@@ -6,7 +6,7 @@ public class TakeDamageFromBubble : MonoBehaviour
 {
     Stats stats;
     SimpleAIInputManager ai;
-  
+    [SerializeField] float timeStunned;
  
     float input;
     private void Awake()
@@ -32,7 +32,7 @@ public class TakeDamageFromBubble : MonoBehaviour
 
              input = ai.inputVector.x;
             ai.inputVector.x = 0;
-            StartCoroutine(ExecuteAfterTime(2));
+            StartCoroutine(ExecuteAfterTime(timeStunned));
 
 
 
