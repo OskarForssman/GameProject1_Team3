@@ -8,7 +8,8 @@ public class ShotBubbleThatReflect : MonoBehaviour
     CharacterController controller;
     UnitInputs input;
     private float nextFire = 0.0F;
-    public float fireRate = 2F;
+    [SerializeField]  public float fireRateInsecbig = 2F;
+    [SerializeField] public float fireRateInsecSmall = 0.2F;
     [SerializeField] private Camera cam;
     [SerializeField]  GameObject smallbubble;
    
@@ -21,16 +22,17 @@ public class ShotBubbleThatReflect : MonoBehaviour
     {
         if (input.spawnBubblebehind && Time.time> nextFire)
         {
-            nextFire = Time.time + fireRate;
+            nextFire = Time.time + fireRateInsecbig;
             spawnBigJumpableBubble(-1);
         }
         if (input.spawnBubbleforward && Time.time > nextFire)
         {
-            nextFire = Time.time + fireRate;
+            nextFire = Time.time + fireRateInsecbig;
             spawnBigJumpableBubble(1);
         }
-        if (input.shootReflectBubble)
+        if (input.shootReflectBubble && Time.time > nextFire)
         {
+            nextFire = Time.time + fireRateInsecSmall;
             shootSmallBubble();
         }
     }

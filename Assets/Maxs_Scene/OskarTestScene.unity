@@ -423,9 +423,11 @@ GameObject:
   - component: {fileID: 1361612712}
   - component: {fileID: 1361612717}
   - component: {fileID: 1361612719}
+  - component: {fileID: 1361612713}
+  - component: {fileID: 1361612720}
   m_Layer: 3
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -450,6 +452,18 @@ MonoBehaviour:
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &1361612713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361612711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a7bf57ea49a1ea4c839239f4b5439b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!23 &1361612714
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -507,7 +521,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1361612711}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.5005391, y: 1.5313203, z: 0.44824153}
+  m_LocalPosition: {x: 1.5005391, y: 1.5313203, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1670120783}
@@ -563,9 +577,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24b7041711bf7344fac722e3ba552c0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  team: 1
   health: 1
   bounceCooldown: 0
+  team: 1
+--- !u!136 &1361612720
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361612711}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1433602300
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,7 +647,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 11.57715
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -644,7 +672,7 @@ Transform:
   m_GameObject: {fileID: 1433602300}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -658,7 +686,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1458158305}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Environment
   m_TagString: Enviroment
   m_Icon: {fileID: 0}
@@ -878,7 +906,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1670120783}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Units
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -951,11 +979,10 @@ GameObject:
   - component: {fileID: 1924816075}
   - component: {fileID: 1924816080}
   - component: {fileID: 1924816074}
-  - component: {fileID: 1924816079}
   - component: {fileID: 1924816082}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1076,24 +1103,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1924816073}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.9604093, y: -0.5845803, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1670120783}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1924816079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1924816073}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd7cb93d76bd2d242a36df621bb2b885, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1924816080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1106,9 +1121,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24b7041711bf7344fac722e3ba552c0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  team: 0
   health: 3
   bounceCooldown: 0
+  team: 0
 --- !u!114 &1924816081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1123,7 +1138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitLayerMask:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 136
   bounciness: 15
 --- !u!114 &1924816082
 MonoBehaviour:
@@ -1138,6 +1153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bubble: {fileID: 7701884690343755763, guid: 39e5e32c3bc0b3e42ae06c05534420fb, type: 3}
-  fireRate: 2
+  fireRateInsecbig: 2
+  fireRateInsecSmall: 0.2
   cam: {fileID: 1433602302}
   smallbubble: {fileID: 7701884690343755763, guid: 2ac72cfff3c7aa34f9c9b95651c187dd, type: 3}
