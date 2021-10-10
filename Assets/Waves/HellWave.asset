@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc3bb7a7b59a60842b6994eecbd8af67, type: 3}
   m_Name: HellWave
   m_EditorClassIdentifier: 
-  timeToCompleteWave: 0
+  timeToCompleteWave: 30
   enemiesPerWave: 10
   enemiesOnScreen: 6
   enemySpawnInterval: 0.1
