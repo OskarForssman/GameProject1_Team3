@@ -695,6 +695,7 @@ MonoBehaviour:
     m_Bits: 64
   moveornot: 0
   player: {fileID: 1924816073}
+  picture: {fileID: 988672550}
 --- !u!114 &1361612713
 MonoBehaviour:
   m_ObjectHideFlags: 0

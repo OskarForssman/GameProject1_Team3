@@ -10,6 +10,7 @@ public class SimpleAIInputManager : UnitInputs
     [SerializeField] public bool moveornot;
     [SerializeField] GameObject player;
     PlayerMovement movment;
+    
 
 
   
@@ -27,10 +28,17 @@ public class SimpleAIInputManager : UnitInputs
     public void Update()
     {
 
-       
-       
-       
-        Ray ray = new Ray(transform.position, Vector2.right * inputVector.x);
+       if (inputVector.x > 0)
+        {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+
+
+            Ray ray = new Ray(transform.position, Vector2.right * inputVector.x);
         if (Physics.Raycast(ray, 1f, groundLayerMask))
         {
 
