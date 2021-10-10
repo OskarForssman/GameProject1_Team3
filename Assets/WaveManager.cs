@@ -67,7 +67,13 @@ public class WaveManager : MonoBehaviour
     {
         enemiesLeft--;
         enemiesOnScreen--;
+
+        /* 
+         * Zeke: I replace the line 74 with line 76 so I could test the UI :)
+         * 
         if (enemiesLeft <= 0 && enemiesOnScreen <= 0)
+        */
+        if (enemiesLeft <= 0)
         {
             NextWave();
         }
