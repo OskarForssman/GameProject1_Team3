@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Stats : MonoBehaviour
 {
-    [SerializeField] int health;
+    [SerializeField] public int health;
 
     public float bounceCooldown; //The brief period you cannot bounce on something
 
