@@ -16,8 +16,8 @@ public class TakeDamageFromBubble : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        
-        if (collision.transform.tag == "Bubble")
+    
+        if (collision.transform.tag == "Bubble" && gameObject.transform.name != "Snail(Clone)")
         {
             Stats s = transform.GetComponent<Stats>();
           
@@ -29,7 +29,7 @@ public class TakeDamageFromBubble : MonoBehaviour
 
         if (collision.transform.tag == "BigBubble")
         {
-
+            
              input = ai.inputVector.x;
             ai.inputVector.x = 0;
             StartCoroutine(ExecuteAfterTime(timeStunned));

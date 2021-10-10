@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1322360153364226968}
   - component: {fileID: 1322360153364226973}
   - component: {fileID: 1322360153364226975}
+  - component: {fileID: 3578308951145036064}
   m_Layer: 3
   m_Name: Enemy
   m_TagString: Untagged
@@ -43,7 +44,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1322360153364226967}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 0}
 --- !u!23 &1322360153364226970
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -119,9 +120,11 @@ MonoBehaviour:
   jumpInput: 0
   spawnBubblebehind: 0
   spawnBubbleforward: 0
+  shootReflectBubble: 0
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 64
+  moveornot: 0
 --- !u!114 &1322360153364226973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,8 +144,8 @@ MonoBehaviour:
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 64
-  bubble: {fileID: 0}
   velocity: {x: 0, y: 0}
+  grounded: 0
 --- !u!114 &1322360153364226975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,6 +158,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24b7041711bf7344fac722e3ba552c0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  team: 1
   health: 1
   bounceCooldown: 0
+  team: 1
+--- !u!114 &3578308951145036064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322360153364226967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a7bf57ea49a1ea4c839239f4b5439b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeStunned: 0

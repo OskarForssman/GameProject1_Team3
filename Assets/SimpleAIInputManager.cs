@@ -8,15 +8,19 @@ public class SimpleAIInputManager : UnitInputs
 
     [SerializeField] private LayerMask groundLayerMask;
     [SerializeField] public bool moveornot;
-    
+    [SerializeField] GameObject player;
+    PlayerMovement movment;
+
+
+  
     public void Start()
     {
 
-     
 
+        movment = GetComponent<PlayerMovement>();
+
+        inputVector.x = 1;
        
-            inputVector.x = 1;
-        
 
     }
 
@@ -37,7 +41,11 @@ public class SimpleAIInputManager : UnitInputs
             
             
         }
-        
+        if (gameObject.transform.name == "Enemy")
+        {
+            movment.CanJump(movment.GroundCheck());
+        }
+       
 
 
     }
