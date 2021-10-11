@@ -9,17 +9,18 @@ public class BreakBubble : MonoBehaviour
     [SerializeField] float colliderRadius;
     [SerializeField] bool willTrap; //Wether or not this bubble will trap hit enemies
 
-    /*
+    
     public void Update()
     {
-        //Destroy(gameObject, bubblepopinthisamountofsec);
+        Destroy(gameObject, bubblepopinthisamountofsec);
 
-        RaycastHit hit;
-        if (Physics.SphereCast(transform.position, colliderRadius, Vector3.down, out hit, 0.01f, enemyLayerMask))
+
+        Collider[] hit = Physics.OverlapSphere(transform.position, colliderRadius, enemyLayerMask);
+        if (hit.Length != 0)
         {
             if (!willTrap)
             {
-                Stats s = hit.transform.GetComponent<Stats>();
+                Stats s = hit[0].transform.GetComponent<Stats>();
                 if (!s.isResistant)
                 {
                     s.TakeDamage(1);
@@ -42,8 +43,8 @@ public class BreakBubble : MonoBehaviour
             }
         }
     }
-    */
-
+    
+    /*
     public void OnCollisionEnter(Collision collision)
     {
             if (!willTrap)
@@ -74,6 +75,7 @@ public class BreakBubble : MonoBehaviour
 
             
     }
+    */
     public void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(transform.position, colliderRadius);
