@@ -12,7 +12,7 @@ public class SimpleAIInputManager : UnitInputs
 
     [SerializeField] bool jumper;
     [SerializeField] bool tadpoolRunawayFromPlayer;
-    
+    [SerializeField] int DistanceToRunAwayFROM;
 
 
     public void Start()
@@ -36,7 +36,7 @@ public class SimpleAIInputManager : UnitInputs
         {
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
-       if(tadpoolRunawayFromPlayer && Vector3.Distance(player.transform.position, gameObject.transform.position)<2)
+       if(tadpoolRunawayFromPlayer && Vector3.Distance(player.transform.position, gameObject.transform.position)< DistanceToRunAwayFROM)
         {
            
             RunAround(inputVector.x *= -1);

@@ -114,6 +114,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 67316261098603644, guid: 115ccb77d8fcf4e42aa550d1723f07f8, type: 3}
+    - target: {fileID: 1322360153364226968, guid: 3477f38801859dd4d961f4123b9c15ef, type: 3}
+      propertyPath: DistanceToRunAwayFROM
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1322360153364226970, guid: 3477f38801859dd4d961f4123b9c15ef, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
