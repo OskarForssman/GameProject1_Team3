@@ -17,7 +17,7 @@ public class UIManager : MonoBehaviour
     void Start()
     {
        // get the objects that storing the needed information
-       player = GameObject.Find("Player");
+       player = GameObject.Find("PlayerFish");
        waveManager = GameObject.Find("EnemySpawnerManager");
     }
 

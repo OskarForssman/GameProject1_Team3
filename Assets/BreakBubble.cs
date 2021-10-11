@@ -24,17 +24,20 @@ public class BreakBubble : MonoBehaviour
             if (!willTrap)
             {
                 
-                if (!s.isResistant)
+                if (!s.isResistant && !s.isTrapped)
                 {
                     s.TakeDamage(1);
                     Debug.Log("hit enemy");
                     DestroyBubble();
                 }
+                /*
                 else
                 {
                     Debug.Log("couldnt hit enemy");
                     DestroyBubble();
                 }
+                */
+                //Physics.Ignore
                 
 
             }
