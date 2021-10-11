@@ -29,7 +29,7 @@ public class Stats : MonoBehaviour
     public bool spiky;
 
 
-    [HideInInspector] public bool isTrapped;
+    public bool isTrapped;
 
     /*
     public enum Team
