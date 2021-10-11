@@ -4,19 +4,24 @@ using UnityEngine;
 
 public class ShotBubbleThatReflect : MonoBehaviour
 {
-    [SerializeField] private GameObject bubble;
+    
     CharacterController controller;
     InputManager input;
     private float nextFire = 0.0F;
     [SerializeField]  public float fireRateInsecbig = 2F;
     [SerializeField] public float fireRateInsecSmall = 0.2F;
     [SerializeField] private Camera cam;
-    [SerializeField]  GameObject smallbubble;
+    
 
-    [Header("Bubble Firing Properties:")]
+    [Header("Small Bubble Properties:")]
     [SerializeField] float smallBubbleForce;
+    [SerializeField] float smallFiringOffset;
+    [SerializeField] GameObject smallbubble;
+
+    [Header("Big Bubble Properties:")]
     [SerializeField] float bigBubbleForce;
-    [SerializeField] float firingOffset;
+    [SerializeField] float bigFiringOffset;
+    [SerializeField] private GameObject bubble;
 
     [Header("Bubble Charging Properties:")]
     [SerializeField] float bubbleChargeTimeNeeded;
@@ -52,11 +57,11 @@ public class ShotBubbleThatReflect : MonoBehaviour
         {
             if (bubbleChargeTime == bubbleChargeTimeNeeded)
             {
-                FireBubble(bubble, input.fireInputVector, bigBubbleForce);
+                FireBubble(bubble, input.fireInputVector, bigBubbleForce, bigFiringOffset);
             }
             else
             {
-                FireBubble(smallbubble, input.fireInputVector, smallBubbleForce);
+                FireBubble(smallbubble, input.fireInputVector, smallBubbleForce, smallFiringOffset);
             }
             
         }
@@ -91,9 +96,9 @@ public class ShotBubbleThatReflect : MonoBehaviour
         
     }
 
-    private void FireBubble(GameObject _prefab, Vector3 _direction, float _force)
+    private void FireBubble(GameObject _prefab, Vector3 _direction, float _force, float _offset)
     {
-        GameObject gam = Instantiate(_prefab, transform.position + _direction * firingOffset, Quaternion.identity);
+        GameObject gam = Instantiate(_prefab, transform.position + _direction * _offset, Quaternion.identity);
         Rigidbody rb = gam.GetComponent<Rigidbody>();
         rb.AddForce(_direction * _force, ForceMode.VelocityChange);
     }
