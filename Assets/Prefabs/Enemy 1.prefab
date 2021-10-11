@@ -209,8 +209,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   moveornot: 0
-  player: {fileID: 0}
+  player: {fileID: 67316261098603644, guid: 115ccb77d8fcf4e42aa550d1723f07f8, type: 3}
   jumper: 1
+  tadpoolRunawayFromPlayer: 0
 --- !u!114 &2398418533597617273
 MonoBehaviour:
   m_ObjectHideFlags: 0
