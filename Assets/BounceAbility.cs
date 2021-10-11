@@ -35,7 +35,15 @@ public class BounceAbility : MonoBehaviour
                 {
                     //TODO: add a brief bounce cooldown
                     movement.Bounce(bounciness);
-                    s.TakeDamage(3);
+                    if (!s.bounceImmunity)
+                    {
+                        s.TakeDamage(3);
+                    }
+                    if (s.spiky)
+                    {
+                        stats.TakeDamage(1);
+                    }
+                    
                 }
                     
             }

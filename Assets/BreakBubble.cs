@@ -23,23 +23,20 @@ public class BreakBubble : MonoBehaviour
             Stats s = hit[0].transform.GetComponent<Stats>();
             if (!willTrap)
             {
-                
-                if (!s.isResistant && !s.isTrapped)
+                if (!s.isTrapped)
                 {
-                    s.TakeDamage(1);
-                    Debug.Log("hit enemy");
-                    DestroyBubble();
+                    if (!s.bubbleImmunity)
+                    {
+                        s.TakeDamage(1);
+                        Debug.Log("hit enemy");
+                        DestroyBubble();
+                    }
+                    else
+                    {
+                        DestroyBubble();
+                    }
                 }
-                /*
-                else
-                {
-                    Debug.Log("couldnt hit enemy");
-                    DestroyBubble();
-                }
-                */
-                //Physics.Ignore
                 
-
             }
 
             if (willTrap && trapper?.trappedTransform == null && !s.isTrapped) //Trap if havent trapped already, and only trap if the enemy isnt trapped

@@ -11,7 +11,29 @@ public class Stats : MonoBehaviour
 
     public event Action deathEvent; //WaveManager subscribes to this event and reduce the enemy counter
 
-    public bool isResistant;
+    [Header("Immunities:")]
+
+    [Tooltip("If this one wont be affected by small bubbles")]
+    public bool bubbleImmunity; //This one is immune to small bubbles
+
+    [Tooltip("If this one will simply shrug off being jumped on")]
+    public bool bounceImmunity;
+
+    [Tooltip("If this one will hurt you if you try to jump on it")]
+    public bool spiky;
+
+    
+
+    /*
+    public enum DamageStatus
+    {
+        Normal, //Can kill by jump and bubble
+        Resistant, //Cannot jump or bubble, needs a big bubble
+        Spiky, //Will hurt if you try to jump
+    }
+    public DamageStatus status;
+    */
+
     public bool isTrapped;
 
     /*
