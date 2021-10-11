@@ -9,6 +9,8 @@ public class BreakBubble : MonoBehaviour
     [SerializeField] float colliderRadius;
     [SerializeField] bool willTrap; //Wether or not this bubble will trap hit enemies
 
+    [SerializeField] BubbleTrapper trapper;
+
     
     public void Update()
     {
@@ -18,30 +20,35 @@ public class BreakBubble : MonoBehaviour
         Collider[] hit = Physics.OverlapSphere(transform.position, colliderRadius, enemyLayerMask);
         if (hit.Length != 0)
         {
+            Stats s = hit[0].transform.GetComponent<Stats>();
             if (!willTrap)
             {
-                Stats s = hit[0].transform.GetComponent<Stats>();
+                
                 if (!s.isResistant)
                 {
                     s.TakeDamage(1);
                     Debug.Log("hit enemy");
-                    Destroy(gameObject);
+                    DestroyBubble();
                 }
                 else
                 {
                     Debug.Log("couldnt hit enemy");
-                    Destroy(gameObject);
+                    DestroyBubble();
                 }
                 
 
             }
 
-            if (willTrap)
+            if (willTrap && trapper?.trappedTransform == null) //Trap if havent trapped already
             {
-                //Insert code that traps the enemy inside the bubble
-                
+                trapper.trappedTransform = s.GetComponent<Transform>();
             }
         }
+    }
+
+    public void DestroyBubble()
+    {
+        Destroy(gameObject);
     }
     
     /*
@@ -81,7 +88,14 @@ public class BreakBubble : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, colliderRadius);
     }
 
-
+    public void Awake()
+    {
+        if (GetComponent<BubbleTrapper>())
+        {
+            trapper = GetComponent<BubbleTrapper>();
+        }
+        
+    }
 
     void OnBecameInvisible()
     {

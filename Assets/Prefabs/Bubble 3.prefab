@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: -784007586119150479}
   - component: {fileID: 3223397314837639182}
   - component: {fileID: 1858292173557253018}
+  - component: {fileID: -2341348573962856417}
   m_Layer: 7
   m_Name: Bubble 3
   m_TagString: Untagged
@@ -33,7 +34,7 @@ Transform:
   m_GameObject: {fileID: 7701884690343755763}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8012243759179425685}
   m_Father: {fileID: 0}
@@ -99,7 +100,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.68
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &-4969729909812857581
 Rigidbody:
@@ -115,7 +116,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!114 &8666011635438964709
 MonoBehaviour:
@@ -161,8 +162,9 @@ MonoBehaviour:
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 512
-  colliderRadius: 0.52
-  willTrap: 0
+  colliderRadius: 1.09
+  willTrap: 1
+  trapper: {fileID: 0}
 --- !u!114 &1858292173557253018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,7 +177,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7fd5a2efdfdda64e86aa49faab06566, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floatAmount: 0.7
+  floatAmount: 0.035
+--- !u!114 &-2341348573962856417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7701884690343755763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df1ed3eb105af5a4c956e1e2ad554214, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trappedTransform: {fileID: 0}
 --- !u!1 &8971811331821741602
 GameObject:
   m_ObjectHideFlags: 0

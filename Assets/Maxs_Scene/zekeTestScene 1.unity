@@ -3026,7 +3026,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18e4d06ec9aca5e489706b239b1c06f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bubble: {fileID: 7701884690343755763, guid: f2c90ec9eadc38b438f32689f49364e5, type: 3}
+  bubble: {fileID: 7701884690343755763, guid: a9a8890efa1a0b940b9614b795a263e9, type: 3}
   fireRateInsecbig: 2
   fireRateInsecSmall: 0.2
   cam: {fileID: 1433602302}
