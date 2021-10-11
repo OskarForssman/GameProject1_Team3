@@ -112,7 +112,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 671850495204827739}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.9916, y: 3.8578, z: 0}
   m_LocalScale: {x: 0.93750113, y: 1.0027384, z: 0.7091}
   m_Children:
@@ -208,6 +208,7 @@ MonoBehaviour:
   shootReflectBubble: 0
   shootHoldInput: 0
   shootReleaseInput: 0
+  fireInputVector: {x: 0, y: 0}
 --- !u!114 &671850495204827714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,8 +222,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
+  damageInvuln: 1
   bounceCooldown: 0
-  isResistant: 0
+  bubbleImmunity: 0
+  bounceImmunity: 0
+  spiky: 0
   isTrapped: 0
 --- !u!114 &671850495204827715
 MonoBehaviour:
@@ -278,3 +282,7 @@ MonoBehaviour:
   fireRateInsecSmall: 0.2
   cam: {fileID: 0}
   smallbubble: {fileID: 7701884690343755763, guid: f2c90ec9eadc38b438f32689f49364e5, type: 3}
+  smallBubbleForce: 13
+  bigBubbleForce: 16
+  bubbleChargeTimeNeeded: 1
+  bubbleChargeTime: 0

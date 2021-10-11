@@ -6,20 +6,30 @@ public class ShotBubbleThatReflect : MonoBehaviour
 {
     [SerializeField] private GameObject bubble;
     CharacterController controller;
-    UnitInputs input;
+    InputManager input;
     private float nextFire = 0.0F;
     [SerializeField]  public float fireRateInsecbig = 2F;
     [SerializeField] public float fireRateInsecSmall = 0.2F;
     [SerializeField] private Camera cam;
     [SerializeField]  GameObject smallbubble;
+
+    [Header("Bubble Firing Properties:")]
+    [SerializeField] float smallBubbleForce;
+    [SerializeField] float bigBubbleForce;
+    [SerializeField] float firingOffset;
+
+    [Header("Bubble Charging Properties:")]
+    [SerializeField] float bubbleChargeTimeNeeded;
+    public float bubbleChargeTime;
    
     public void Awake()
     {
-        input = GetComponent<UnitInputs>();
+        input = GetComponent<InputManager>();
         
     }
     void Update()
     {
+        /*
         if (input.spawnBubblebehind && Time.time> nextFire)
         {
             nextFire = Time.time + fireRateInsecbig;
@@ -34,6 +44,31 @@ public class ShotBubbleThatReflect : MonoBehaviour
         {
             nextFire = Time.time + fireRateInsecSmall;
             shootSmallBubble();
+        }
+        */
+        
+
+        if (input.shootReleaseInput)
+        {
+            if (bubbleChargeTime == bubbleChargeTimeNeeded)
+            {
+                FireBubble(bubble, input.fireInputVector, bigBubbleForce);
+            }
+            else
+            {
+                FireBubble(smallbubble, input.fireInputVector, smallBubbleForce);
+            }
+            
+        }
+
+        if (input.shootHoldInput)
+        {
+            bubbleChargeTime += Time.deltaTime;
+            bubbleChargeTime = Mathf.Clamp(bubbleChargeTime, 0, bubbleChargeTimeNeeded);
+        }
+        else
+        {
+            bubbleChargeTime = 0;
         }
     }
     private void spawnBigJumpableBubble(int x)
@@ -54,5 +89,12 @@ public class ShotBubbleThatReflect : MonoBehaviour
         ShootBubble  bulletz = Instantiate(smallbubble, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y), gameObject.transform.rotation)?.GetComponent<ShootBubble>();
             bulletz.shoot(directionVector,10);
         
+    }
+
+    private void FireBubble(GameObject _prefab, Vector3 _direction, float _force)
+    {
+        GameObject gam = Instantiate(_prefab, transform.position + _direction * firingOffset, Quaternion.identity);
+        Rigidbody rb = gam.GetComponent<Rigidbody>();
+        rb.AddForce(_direction * _force, ForceMode.VelocityChange);
     }
 }

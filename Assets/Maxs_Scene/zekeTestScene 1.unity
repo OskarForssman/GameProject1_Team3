@@ -2315,9 +2315,13 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 1433602302}
-    - target: {fileID: 671850495204827714, guid: 97f89031f8f155e418a7fb128555afc5, type: 3}
-      propertyPath: damageInvuln
-      value: 1
+    - target: {fileID: 671850495204827712, guid: 97f89031f8f155e418a7fb128555afc5, type: 3}
+      propertyPath: firingOffset
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 671850495204827736, guid: 97f89031f8f155e418a7fb128555afc5, type: 3}
+      propertyPath: maxFallSpeed
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 671850495204827739, guid: 97f89031f8f155e418a7fb128555afc5, type: 3}
       propertyPath: m_Name
