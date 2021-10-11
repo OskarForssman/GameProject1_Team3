@@ -11,10 +11,10 @@ public class SimpleAIInputManager : UnitInputs
     PlayerMovement movment;
 
     [SerializeField] bool jumper;
+    [SerializeField] bool tadpoolRunawayFromPlayer;
     
 
 
-  
     public void Start()
     {
 
@@ -28,7 +28,6 @@ public class SimpleAIInputManager : UnitInputs
 
     public void Update()
     {
-
        if (inputVector.x > 0)
         {
             transform.rotation = Quaternion.Euler(0, 180, 0);
@@ -37,18 +36,20 @@ public class SimpleAIInputManager : UnitInputs
         {
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
-
-
-            Ray ray = new Ray(transform.position, Vector2.right * inputVector.x);
-        if (Physics.Raycast(ray, 1f, groundLayerMask))
+       if(tadpoolRunawayFromPlayer && Vector3.Distance(player.transform.position, gameObject.transform.position)<2)
         {
-
-              inputVector.x *= -1;
            
+            RunAround(inputVector.x *= -1);
+            
+        }
+      else 
+        {
+                RunAround(inputVector.x);
+            
+           
+            
 
-            
-            
-            
+
         }
         if (jumper)
         {
@@ -62,7 +63,20 @@ public class SimpleAIInputManager : UnitInputs
   
 
 
- 
+ void RunAround(float  dir)
+    {
+        Ray ray = new Ray(transform.position, Vector2.right * dir);
+        if (Physics.Raycast(ray, 1f, groundLayerMask))
+        {
+
+            inputVector.x *= -1;
+
+
+
+
+
+        }
+    }
    
   
 
