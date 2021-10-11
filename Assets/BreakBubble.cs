@@ -14,7 +14,7 @@ public class BreakBubble : MonoBehaviour
     
     public void Update()
     {
-        Destroy(gameObject, bubblepopinthisamountofsec);
+        //Destroy(gameObject, bubblepopinthisamountofsec); //This skips the DestroyBubble method, so it never unsets the enemies isTrapped status
 
 
         Collider[] hit = Physics.OverlapSphere(transform.position, colliderRadius, enemyLayerMask);
@@ -39,7 +39,7 @@ public class BreakBubble : MonoBehaviour
 
             }
 
-            if (willTrap && trapper?.trappedTransform == null && !s.isTrapped) //Trap if havent trapped already
+            if (willTrap && trapper?.trappedTransform == null && !s.isTrapped) //Trap if havent trapped already, and only trap if the enemy isnt trapped
             {
                 trapper.SetTrapped(hit[0].GetComponent<Transform>());
             }
