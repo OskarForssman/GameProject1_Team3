@@ -10,6 +10,8 @@ public class SimpleAIInputManager : UnitInputs
     [SerializeField] public bool moveornot;
     [SerializeField] GameObject player;
     PlayerMovement movment;
+
+    [SerializeField] bool jumper;
     
 
 
@@ -49,7 +51,7 @@ public class SimpleAIInputManager : UnitInputs
             
             
         }
-        if (gameObject.transform.name == "Enemy")
+        if (jumper)
         {
             movment.CanJump(movment.GroundCheck());
         }

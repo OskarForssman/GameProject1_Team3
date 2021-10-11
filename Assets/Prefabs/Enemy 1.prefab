@@ -210,6 +210,7 @@ MonoBehaviour:
     m_Bits: 64
   moveornot: 0
   player: {fileID: 0}
+  jumper: 1
 --- !u!114 &2398418533597617273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,7 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24b7041711bf7344fac722e3ba552c0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 3
   bounceCooldown: 0
   team: 1
 --- !u!114 &2398418533597617277
