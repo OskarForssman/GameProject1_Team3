@@ -104,7 +104,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1322360153364226967, guid: 3477f38801859dd4d961f4123b9c15ef, type: 3}
       propertyPath: m_Name
-      value: Sluge
+      value: Snail
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322360153364226967, guid: 3477f38801859dd4d961f4123b9c15ef, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 1322360153364226970, guid: 3477f38801859dd4d961f4123b9c15ef, type: 3}
       propertyPath: m_Enabled
