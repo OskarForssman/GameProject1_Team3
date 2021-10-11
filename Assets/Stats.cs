@@ -5,13 +5,19 @@ using UnityEngine;
 
 public class Stats : MonoBehaviour
 {
-    [SerializeField] public int health;
+    [Header("General Stats:")]
+
+    public int health;
+
+    [Tooltip("How long this character will be immune after taking damage")]
+    [SerializeField] float damageInvuln;
+    float damageInvulnLeft;
 
     public float bounceCooldown; //The brief period you cannot bounce on something
 
     public event Action deathEvent; //WaveManager subscribes to this event and reduce the enemy counter
 
-    [Header("Immunities:")]
+    [Header("Enemy Immunities:")]
 
     [Tooltip("If this one wont be affected by small bubbles")]
     public bool bubbleImmunity; //This one is immune to small bubbles
@@ -22,19 +28,8 @@ public class Stats : MonoBehaviour
     [Tooltip("If this one will hurt you if you try to jump on it")]
     public bool spiky;
 
-    
 
-    /*
-    public enum DamageStatus
-    {
-        Normal, //Can kill by jump and bubble
-        Resistant, //Cannot jump or bubble, needs a big bubble
-        Spiky, //Will hurt if you try to jump
-    }
-    public DamageStatus status;
-    */
-
-    public bool isTrapped;
+    [HideInInspector] public bool isTrapped;
 
     /*
     public enum Team
@@ -44,6 +39,12 @@ public class Stats : MonoBehaviour
     }
     public Team team = Team.player; //What team said thing is on
     */
+
+    public void Update()
+    {
+        damageInvulnLeft -= Time.deltaTime;
+    }
+
 
     public void Awake()
     {
@@ -58,11 +59,16 @@ public class Stats : MonoBehaviour
 
     public void TakeDamage(int _DMGAmount)
     {
-        health -= _DMGAmount;
-        if (health <= 0)
+        if (damageInvulnLeft <= 0)
         {
-            Die();
+            damageInvulnLeft = damageInvuln;
+            health -= _DMGAmount;
+            if (health <= 0)
+            {
+                Die();
+            }
         }
+        
     }
 
     public void Die()
