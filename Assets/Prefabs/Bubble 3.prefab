@@ -111,7 +111,7 @@ Rigidbody:
   m_GameObject: {fileID: 7701884690343755763}
   serializedVersion: 2
   m_Mass: 0.0000001
-  m_Drag: 1.8
+  m_Drag: 2.2
   m_AngularDrag: 0
   m_UseGravity: 0
   m_IsKinematic: 0
@@ -144,8 +144,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  damageInvuln: 0
   bounceCooldown: 0
-  isResistant: 0
+  bubbleImmunity: 0
+  bounceImmunity: 0
+  spiky: 0
+  isTrapped: 0
 --- !u!114 &3223397314837639182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e5c94033a68f8d4fac561db5d578a89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bubblepopinthisamountofsec: 5
+  bubblepopinthisamountofsec: 7.5
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 512

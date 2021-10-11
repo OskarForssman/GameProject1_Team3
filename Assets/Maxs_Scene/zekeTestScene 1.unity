@@ -2319,6 +2319,14 @@ PrefabInstance:
       propertyPath: firingOffset
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 671850495204827712, guid: 97f89031f8f155e418a7fb128555afc5, type: 3}
+      propertyPath: bigFiringOffset
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 671850495204827712, guid: 97f89031f8f155e418a7fb128555afc5, type: 3}
+      propertyPath: smallFiringOffset
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 671850495204827736, guid: 97f89031f8f155e418a7fb128555afc5, type: 3}
       propertyPath: maxFallSpeed
       value: 7
