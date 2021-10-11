@@ -31,9 +31,13 @@ public class BounceAbility : MonoBehaviour
             if (movement.velocity.y < 0 && hit.transform.GetComponent<Stats>())
             {
                 Stats s = hit.transform.GetComponent<Stats>();
+                if (!s.isTrapped)
+                {
                     //TODO: add a brief bounce cooldown
                     movement.Bounce(bounciness);
                     s.TakeDamage(3);
+                }
+                    
             }
             
             

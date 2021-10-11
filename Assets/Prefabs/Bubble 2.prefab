@@ -115,7 +115,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!114 &8666011635438964709
 MonoBehaviour:
@@ -163,6 +163,7 @@ MonoBehaviour:
     m_Bits: 512
   colliderRadius: 0.61
   willTrap: 0
+  trapper: {fileID: 0}
 --- !u!114 &1858292173557253018
 MonoBehaviour:
   m_ObjectHideFlags: 0

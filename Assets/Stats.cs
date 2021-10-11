@@ -12,6 +12,7 @@ public class Stats : MonoBehaviour
     public event Action deathEvent; //WaveManager subscribes to this event and reduce the enemy counter
 
     public bool isResistant;
+    public bool isTrapped;
 
     /*
     public enum Team
@@ -22,7 +23,16 @@ public class Stats : MonoBehaviour
     public Team team = Team.player; //What team said thing is on
     */
 
-    
+    public void Awake()
+    {
+        if (GetComponent<BreakBubble>())
+        {
+            BreakBubble breakBubble = GetComponent<BreakBubble>();
+            deathEvent += breakBubble.DestroyBubble;
+        }
+        
+    }
+
 
     public void TakeDamage(int _DMGAmount)
     {

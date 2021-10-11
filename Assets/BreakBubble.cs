@@ -39,15 +39,21 @@ public class BreakBubble : MonoBehaviour
 
             }
 
-            if (willTrap && trapper?.trappedTransform == null) //Trap if havent trapped already
+            if (willTrap && trapper?.trappedTransform == null && !s.isTrapped) //Trap if havent trapped already
             {
-                trapper.trappedTransform = s.GetComponent<Transform>();
+                trapper.SetTrapped(hit[0].GetComponent<Transform>());
             }
         }
     }
 
     public void DestroyBubble()
     {
+        if (trapper != null && trapper.trappedTransform != null)
+        {
+            trapper.DamageTrapped();
+            trapper.UnsetTrapped();
+        }
+        
         Destroy(gameObject);
     }
     
