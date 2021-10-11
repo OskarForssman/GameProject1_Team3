@@ -6,6 +6,8 @@ public class TakeDamageFromBubble : MonoBehaviour
 {
     Stats stats;
     SimpleAIInputManager ai;
+
+    
     [SerializeField] float timeStunned;
  
     float input;
@@ -17,28 +19,18 @@ public class TakeDamageFromBubble : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
     
-        if (collision.transform.tag == "Bubble" && gameObject.transform.name != "Snail(Clone)")
-        {
-            Stats s = transform.GetComponent<Stats>();
-          
-               
-                s.TakeDamage(1);
-            
-        }
+        
 
+    }
 
-        if (collision.transform.tag == "BigBubble")
-        {
-            
-             input = ai.inputVector.x;
-            ai.inputVector.x = 0;
-            StartCoroutine(ExecuteAfterTime(timeStunned));
+    public void Update()
+    {
+        
+    }
 
-
-
-
-        }
-
+    public void OnDrawGizmos()
+    {
+        
     }
     IEnumerator ExecuteAfterTime(float time)
     {

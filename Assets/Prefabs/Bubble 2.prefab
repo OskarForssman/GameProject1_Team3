@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 1858292173557253018}
   m_Layer: 7
   m_Name: Bubble 2
-  m_TagString: BigBubble
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   bounceCooldown: 0
-  team: 1
+  isResistant: 0
 --- !u!114 &3223397314837639182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,6 +158,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bubblepopinthisamountofsec: 5
+  enemyLayerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  colliderRadius: 0.61
+  willTrap: 0
 --- !u!114 &1858292173557253018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,7 +186,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8012243759179425685}
   - component: {fileID: 7016885312362571835}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bubble_PNG (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

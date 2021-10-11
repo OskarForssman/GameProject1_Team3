@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2398418531856802300}
   - component: {fileID: 2398418531856802291}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Frog_PNG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,8 +98,8 @@ GameObject:
   - component: {fileID: 2398418533597617273}
   - component: {fileID: 2398418533597617275}
   - component: {fileID: 2398418533597617277}
-  - component: {fileID: 2398418533597617252}
-  m_Layer: 3
+  - component: {fileID: 2163014904981824240}
+  m_Layer: 9
   m_Name: Enemy 1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -246,7 +246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 3
   bounceCooldown: 0
-  team: 1
+  isResistant: 0
 --- !u!114 &2398418533597617277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,8 +260,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeStunned: 2
---- !u!136 &2398418533597617252
-CapsuleCollider:
+--- !u!135 &2163014904981824240
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -270,7 +270,6 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
+  serializedVersion: 2
   m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}

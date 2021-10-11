@@ -11,12 +11,16 @@ public class Stats : MonoBehaviour
 
     public event Action deathEvent; //WaveManager subscribes to this event and reduce the enemy counter
 
+    public bool isResistant;
+
+    /*
     public enum Team
     {
         player,
         enemy
     }
     public Team team = Team.player; //What team said thing is on
+    */
 
     
 
