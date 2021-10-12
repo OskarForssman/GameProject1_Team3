@@ -2560,6 +2560,7 @@ GameObject:
   m_Component:
   - component: {fileID: 833464843}
   - component: {fileID: 833464842}
+  - component: {fileID: 833464844}
   m_Layer: 0
   m_Name: PopupSpawnManager
   m_TagString: Untagged
@@ -2589,6 +2590,8 @@ MonoBehaviour:
   spawnPoints: []
   timertospawnpopup: 5
   destroypopup: 0
+  spawnPopu: 0
+  destroypoopup: 0
 --- !u!4 &833464843
 Transform:
   m_ObjectHideFlags: 0
@@ -2604,6 +2607,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &833464844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833464841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 107f0c132efd16b45be9e3d8c15b7012, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timebefredestroyPopup: 3
+  timerbfrspawn: 3
 --- !u!1 &835407521
 GameObject:
   m_ObjectHideFlags: 0

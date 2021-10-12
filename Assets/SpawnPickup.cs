@@ -13,6 +13,9 @@ public class SpawnPickup : MonoBehaviour
     List<GameObject> popups;
     float timeLeft;
     float destroybubble;
+
+    public bool spawnPopu;
+    public bool destroypoopup;
     void Start()
     {
         spawnPoints = SetSpawnPoints(spawnPointFolder);
@@ -21,22 +24,14 @@ public class SpawnPickup : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-      //FIXA IKV
-
-        timeLeft -= Time.deltaTime;
-        if (timeLeft < 0)
-        {
-            SpawnPopup();
-        }
-       
-    }
-
+  
     
 
-    void SpawnPopup()
+   public  void SpawnPopup()
     {
+
+            
+
         if (getAmountofCHilds(1) <= 0)
         {
             SpawnRandomPickUp(1);
@@ -79,21 +74,21 @@ public class SpawnPickup : MonoBehaviour
 
 
     }
-    IEnumerator Timer()
+   
+    public void DestroyPopup()
     {
-
-
-
-        yield return new WaitForSeconds(destroypopup);
-        for(int i = 0; i < popups.Count; i++)
+        for (int i = 0; i < popups.Count; i++)
         {
             Destroy(popups[i]);
             popups.RemoveAt(i);
         }
-       
-        
+
 
     }
+
+
+
+
 
     private int  getAmountofCHilds(int x)
     {
