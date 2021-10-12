@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BreakBubble : MonoBehaviour
 {
-    [SerializeField] GameObject particle;
     SoundManager sound;
     public float bubblepopinthisamountofsec = 5f;
     private float timeLeft;
@@ -66,7 +65,6 @@ public class BreakBubble : MonoBehaviour
             trapper.DamageTrapped();
             trapper.UnsetTrapped();
         }
-        EmitBubble();
         Destroy(gameObject);
     }
 
@@ -78,15 +76,9 @@ public class BreakBubble : MonoBehaviour
         {
             trapper.UnsetTrapped();
         }
-        EmitBubble();
         Destroy(gameObject);
     }
 
-    private void EmitBubble()
-    {
-        GameObject gam = Instantiate(particle, transform.position, Quaternion.identity);
-        gam.transform.rotation = Quaternion.Euler(-90, 0, 0);
-    }
    
     public void OnDrawGizmos()
     {
@@ -111,7 +103,7 @@ public class BreakBubble : MonoBehaviour
 
     public void OnDestroy()
     {
-        sound.PlayBubbleJumpSound();
+        //sound.PlayBubbleJumpSound();
         
     }
 }

@@ -31,6 +31,9 @@ public class Stats : MonoBehaviour
 
     public bool isTrapped;
 
+    [SerializeField] GameObject deathParticle;
+    PlayerMovement movement;
+
     /*
     public enum Team
     {
@@ -53,7 +56,10 @@ public class Stats : MonoBehaviour
             BreakBubble breakBubble = GetComponent<BreakBubble>();
             deathEvent += breakBubble.DestroyBubble;
         }
-        
+        if (GetComponent<PlayerMovement>())
+        {
+            movement = GetComponent<PlayerMovement>();
+        }
     }
 
     public void setInval(float time)
@@ -65,6 +71,8 @@ public class Stats : MonoBehaviour
     {
         if (damageInvulnLeft <= 0)
         {
+            if (movement != null) { movement.velocity.y = 5f; } //Not pretty that it's hardcoded buuut
+            
             damageInvulnLeft = damageInvuln;
             health -= _DMGAmount;
             if (health <= 0)
@@ -82,6 +90,12 @@ public class Stats : MonoBehaviour
     public void Die()
     {
         deathEvent?.Invoke();
+        
         Destroy(gameObject);
+    }
+
+    public void OnDestroy()
+    {
+        Instantiate(deathParticle, transform.position, Quaternion.identity);
     }
 }

@@ -254,6 +254,7 @@ MonoBehaviour:
   bounceImmunity: 0
   spiky: 0
   isTrapped: 0
+  deathParticle: {fileID: 1756117777625351211, guid: 5bb1de0ee68eec54fb76d34191cfb991, type: 3}
 --- !u!114 &2398418533597617277
 MonoBehaviour:
   m_ObjectHideFlags: 0

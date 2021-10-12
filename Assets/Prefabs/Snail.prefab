@@ -226,6 +226,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1322360153364226975, guid: 3477f38801859dd4d961f4123b9c15ef, type: 3}
+      propertyPath: deathParticle
+      value: 
+      objectReference: {fileID: 1756117777625351211, guid: 5bb1de0ee68eec54fb76d34191cfb991, type: 3}
+    - target: {fileID: 1322360153364226975, guid: 3477f38801859dd4d961f4123b9c15ef, type: 3}
       propertyPath: bounceImmunity
       value: 1
       objectReference: {fileID: 0}
