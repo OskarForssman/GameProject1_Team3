@@ -112,4 +112,4 @@ MonoBehaviour:
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 256
-  colliderRadius: 0.1
+  colliderRadius: 0.8

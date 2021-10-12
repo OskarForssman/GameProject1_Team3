@@ -95,6 +95,37 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.74
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4001964620750023349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8734954354809780686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9ab82048f99a494597c4d1ef68f128b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colliderRadius: 0.39
+  colliderOffsetX: 0.45
+  colliderOffsetY: -0.21
+  playerLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
+--- !u!114 &7270962124815787171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8734954354809780686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a7bf57ea49a1ea4c839239f4b5439b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeStunned: 0
 --- !u!1001 &7737532950121011801
 PrefabInstance:
   m_ObjectHideFlags: 0
