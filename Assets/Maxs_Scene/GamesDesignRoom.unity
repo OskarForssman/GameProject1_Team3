@@ -2585,8 +2585,8 @@ MonoBehaviour:
   - {fileID: 1618640378114439213, guid: 94df6b8b68a92854d9dccea9e01ae155, type: 3}
   - {fileID: 5531406043366454696, guid: 499a19f88403ec64eae8f7797ac60c69, type: 3}
   - {fileID: 8814193423649332471, guid: 7795ee470f36ff84dac066b3e1f9de4a, type: 3}
-  - {fileID: 997851612867522398, guid: 77754942c62e53640a98daf88530a923, type: 3}
   - {fileID: 2122664159939178493, guid: 5a611a5a8a6402348a8cd55a21766cc0, type: 3}
+  - {fileID: 997851612867522398, guid: 77754942c62e53640a98daf88530a923, type: 3}
   spawnPoints: []
   timertospawnpopup: 5
   destroypopup: 0
