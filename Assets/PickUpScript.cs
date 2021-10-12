@@ -12,8 +12,29 @@ public class PickUpScript : MonoBehaviour
         Collider[] hit = Physics.OverlapSphere(transform.position, colliderRadius, enemyLayerMask);
         if (hit.Length > 0)
         {
-            Debug.Log(hit[0]);
-           //TODO utifrån vad dem hittar gör ngt!
+          
+
+
+
+                         switch (hit[0].tag)
+            {
+                case "Cannon":
+                    Debug.Log("Cannon");
+                    break;
+                case "Invincible":
+                    Debug.Log("Invincible");
+                    break;
+                case "HP":
+                    Debug.Log("HP");
+                    break;
+                case "Random":
+                    Debug.Log("Random");
+                    break;
+                case "Stone":
+                    Debug.Log("Stone");
+                    break;
+            }
+
         }
         
     }

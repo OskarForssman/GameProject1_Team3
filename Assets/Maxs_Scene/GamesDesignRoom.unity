@@ -1152,7 +1152,7 @@ MonoBehaviour:
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 4096
-  colliderRadius: 1
+  colliderRadius: 0.8
 --- !u!1 &528297992
 GameObject:
   m_ObjectHideFlags: 0
