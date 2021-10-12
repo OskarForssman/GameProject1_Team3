@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 67316261098603620}
   - component: {fileID: 67316261098603647}
   - component: {fileID: 67316261098603623}
+  - component: {fileID: 7088781553750432141}
   m_Layer: 8
   m_Name: Player 1
   m_TagString: Player
@@ -208,6 +209,7 @@ MonoBehaviour:
   shootReflectBubble: 0
   shootHoldInput: 0
   shootReleaseInput: 0
+  fireInputVector: {x: 0, y: 0}
 --- !u!114 &67316261098603621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,8 +223,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
+  damageInvuln: 0
   bounceCooldown: 0
-  isResistant: 0
+  bubbleImmunity: 0
+  bounceImmunity: 0
+  spiky: 0
+  isTrapped: 0
 --- !u!114 &67316261098603620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,8 +278,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18e4d06ec9aca5e489706b239b1c06f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bubble: {fileID: 7701884690343755763, guid: f2c90ec9eadc38b438f32689f49364e5, type: 3}
   fireRateInsecbig: 2
   fireRateInsecSmall: 0.2
   cam: {fileID: 0}
+  smallBubbleForce: 0
+  smallFiringOffset: 0
   smallbubble: {fileID: 7701884690343755763, guid: f2c90ec9eadc38b438f32689f49364e5, type: 3}
+  bigBubbleForce: 0
+  bigFiringOffset: 0
+  bubble: {fileID: 7701884690343755763, guid: f2c90ec9eadc38b438f32689f49364e5, type: 3}
+  bubbleChargeTimeNeeded: 0
+  bubbleChargeTime: 0
+--- !u!135 &7088781553750432141
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67316261098603644}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}

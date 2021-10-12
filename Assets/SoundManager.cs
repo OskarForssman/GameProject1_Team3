@@ -16,9 +16,23 @@ public class SoundManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        PlayNormalJump();
+        PlayNormalShot();
+    }
+
+    void PlayNormalJump()
+    {
         if (Input.GetKeyDown(KeyCode.Space))
         {
             source.PlayOneShot(jumpSound);
+        }
+    }
+
+    void PlayNormalShot()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            source.PlayOneShot(shootBubbleSound);
         }
     }
 }
