@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ShotBubbleThatReflect : MonoBehaviour
 {
-    
-    CharacterController controller;
+
+    Animator anim;
     InputManager input;
     private float nextFire = 0.0F;
     [SerializeField]  public float fireRateInsecbig = 2F;
@@ -31,7 +31,7 @@ public class ShotBubbleThatReflect : MonoBehaviour
     public void Awake()
     {
         input = GetComponent<InputManager>();
-        
+        anim = GetComponentInChildren<Animator>();
     }
     void Update()
     {
@@ -40,9 +40,11 @@ public class ShotBubbleThatReflect : MonoBehaviour
 
         if (input.shootReleaseInput)
         {
+            anim.Play("Shoot", 0, 0);
             if (bubbleChargeTime == bubbleChargeTimeNeeded)
             {
                 FireBubble(bubble, input.fireInputVector, bigBubbleForce, bigFiringOffset);
+                
             }
             else
             {

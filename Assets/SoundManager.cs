@@ -56,5 +56,10 @@ public class SoundManager : MonoBehaviour
         }
     }
 
+    public void PlayBubbleJumpSound()
+    {
+        source.PlayOneShot(bubbleJumpSound);
+    }
+
 
 }

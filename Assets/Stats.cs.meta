@@ -3,7 +3,9 @@ guid: 24b7041711bf7344fac722e3ba552c0f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - deathParticle: {fileID: 68920608000057987, guid: 56043a21dbe80bb42aa9ae761dfdb896, type: 3}
+  - damageParticle: {fileID: 1511839536400694499, guid: 2a0410e4b8ae07c4ea1443f8a679f408, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
