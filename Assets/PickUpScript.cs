@@ -12,7 +12,7 @@ public class PickUpScript : MonoBehaviour
     [SerializeField] float bubblechargetime;
     [SerializeField] float stonesec;
     Stats stats;
-    int increment;
+  
     private void Awake()
     {
         reflect = GetComponent<ShotBubbleThatReflect>();
@@ -44,7 +44,8 @@ public class PickUpScript : MonoBehaviour
                 Destroy(GameObject.FindGameObjectWithTag(hit.transform.tag));
                 break;
                 case "Random":
-                    break;
+                Destroy(GameObject.FindGameObjectWithTag(hit.transform.tag));
+                break;
                 case "Stone":
                     gameObject.GetComponent<InputManager>().enabled = false;
                 Destroy(GameObject.FindGameObjectWithTag(hit.transform.tag));

@@ -23,7 +23,7 @@ public class SpawnPickup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      
+      //FIXA IKV
 
         timeLeft -= Time.deltaTime;
         if (timeLeft < 0)
@@ -47,8 +47,7 @@ public class SpawnPickup : MonoBehaviour
         }
       
        
-        StartCoroutine(Timer());
-        timeLeft = timertospawnpopup;
+       
 
     }
 
@@ -74,8 +73,9 @@ public class SpawnPickup : MonoBehaviour
            GameObject Activepopup = Instantiate(popup[rand], spawnPoints[whichSpawnPoint], Quaternion.identity);
            Activepopup.transform.SetParent(spawnPointFolder.GetChild(whichSpawnPoint-1));
            popups.Add(Activepopup);
+        timeLeft = timertospawnpopup;
 
-           
+
 
 
     }
