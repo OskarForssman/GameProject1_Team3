@@ -32,6 +32,7 @@ public class Stats : MonoBehaviour
     public bool isTrapped;
 
     [SerializeField] GameObject deathParticle;
+    [SerializeField] GameObject damageParticle;
     PlayerMovement movement;
 
     /*
@@ -72,7 +73,7 @@ public class Stats : MonoBehaviour
         if (damageInvulnLeft <= 0)
         {
             if (movement != null) { movement.velocity.y = 5f; } //Not pretty that it's hardcoded buuut
-            
+            if (damageParticle != null) { Instantiate(damageParticle, transform.position, Quaternion.identity); }
             damageInvulnLeft = damageInvuln;
             health -= _DMGAmount;
             if (health <= 0)
