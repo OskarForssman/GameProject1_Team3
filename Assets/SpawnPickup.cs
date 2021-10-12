@@ -9,11 +9,15 @@ public class SpawnPickup : MonoBehaviour
     public Vector2[] spawnPoints;
     // Start is called before the first frame update+
     [SerializeField] float timertospawnpopup;
+    [SerializeField] float destroypopup;
+    List<GameObject> popups;
     float timeLeft;
+    float destroybubble;
     void Start()
     {
         spawnPoints = SetSpawnPoints(spawnPointFolder);
          timeLeft = timertospawnpopup;
+        popups = new List<GameObject>();
     }
 
     // Update is called once per frame
@@ -41,6 +45,10 @@ public class SpawnPickup : MonoBehaviour
         {
             SpawnRandomPickUp(2);
         }
+      
+       
+        StartCoroutine(Timer());
+        timeLeft = timertospawnpopup;
 
     }
 
@@ -65,8 +73,25 @@ public class SpawnPickup : MonoBehaviour
        
            GameObject Activepopup = Instantiate(popup[rand], spawnPoints[whichSpawnPoint], Quaternion.identity);
            Activepopup.transform.SetParent(spawnPointFolder.GetChild(whichSpawnPoint-1));
-        timeLeft = timertospawnpopup;
+           popups.Add(Activepopup);
 
+           
+
+
+    }
+    IEnumerator Timer()
+    {
+
+
+
+        yield return new WaitForSeconds(destroypopup);
+        for(int i = 0; i < popups.Count; i++)
+        {
+            Destroy(popups[i]);
+            popups.RemoveAt(i);
+        }
+       
+        
 
     }
 

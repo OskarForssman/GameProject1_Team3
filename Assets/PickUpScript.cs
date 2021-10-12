@@ -8,42 +8,39 @@ public class PickUpScript : MonoBehaviour
     [SerializeField] LayerMask enemyLayerMask;
     [SerializeField] float colliderRadius;
     ShotBubbleThatReflect reflect;
-    [SerializeField] int hpgain;
     [SerializeField] float inviciblesec;
     [SerializeField] float bubblechargetime;
     [SerializeField] float stonesec;
     Stats stats;
+    int increment;
     private void Awake()
     {
         reflect = GetComponent<ShotBubbleThatReflect>();
         stats = GetComponent<Stats>();
         //Cannonpowerupduration
         //stats
+        
     }
     void Update()
     {
+       
         Collider[] hit = Physics.OverlapSphere(transform.position, colliderRadius, enemyLayerMask);
         if (hit.Length > 0)
         {
          switch (hit[0].tag)
             {
                 case "Cannon":
-                    Debug.Log("Cannon");
                     reflect.bubbleChargeTime=bubblechargetime;
                     break;
                 case "Invincible":
-                    Debug.Log("Invincible");
                     stats.setInval(inviciblesec);
                       break;
                 case "HP":
-                    Debug.Log("HP");
-                    stats.getHp(hpgain);
+                  // stats.health++;
                     break;
                 case "Random":
-                    Debug.Log("Random");
-                    break;
+                      break;
                 case "Stone":
-                    Debug.Log("Stone");
                     gameObject.GetComponent<InputManager>().enabled = false;
                     StartCoroutine(Timer());
 
