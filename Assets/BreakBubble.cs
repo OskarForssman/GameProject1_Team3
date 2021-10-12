@@ -5,6 +5,7 @@ using UnityEngine;
 public class BreakBubble : MonoBehaviour
 {
     [SerializeField] GameObject particle;
+    SoundManager sound;
     public float bubblepopinthisamountofsec = 5f;
     private float timeLeft;
     [SerializeField] LayerMask enemyLayerMask;
@@ -99,10 +100,18 @@ public class BreakBubble : MonoBehaviour
             trapper = GetComponent<BubbleTrapper>();
         }
         timeLeft = bubblepopinthisamountofsec;
+        sound = FindObjectOfType<SoundManager>();
+        
     }
 
     void OnBecameInvisible()
     {
         DestroyBubble();
+    }
+
+    public void OnDestroy()
+    {
+        sound.PlayBubbleJumpSound();
+        
     }
 }

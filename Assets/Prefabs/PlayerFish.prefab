@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 671850495134613552}
   - component: {fileID: 671850495134613553}
+  - component: {fileID: 241776793}
   m_Layer: 8
   m_Name: Fish_PNG
   m_TagString: Untagged
@@ -82,6 +83,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &241776793
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671850495134613555}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1c716494a56b29a4f9077299fcb41934, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &671850495204827739
 GameObject:
   m_ObjectHideFlags: 0
@@ -98,8 +118,8 @@ GameObject:
   - component: {fileID: 671850495204827715}
   - component: {fileID: 671850495204827736}
   - component: {fileID: 671850495204827712}
-  - component: {fileID: 1925715828507307383}
   - component: {fileID: -3073846454450332361}
+  - component: {fileID: 14118674}
   m_Layer: 8
   m_Name: PlayerFish
   m_TagString: Player
@@ -261,7 +281,7 @@ MonoBehaviour:
   moveSpeed: 4
   jumpSpeed: 12.5
   gravity: 35
-  maxFallSpeed: 10
+  maxFallSpeed: 7
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 64
@@ -283,25 +303,14 @@ MonoBehaviour:
   fireRateInsecSmall: 0.2
   cam: {fileID: 0}
   smallBubbleForce: 13
-  smallFiringOffset: 0
+  smallFiringOffset: 0.1
   smallbubble: {fileID: 7701884690343755763, guid: f2c90ec9eadc38b438f32689f49364e5, type: 3}
   bigBubbleForce: 16
-  bigFiringOffset: 0
+  bigFiringOffset: 0.03
   bubble: {fileID: 7701884690343755763, guid: a9a8890efa1a0b940b9614b795a263e9, type: 3}
   bubbleChargeTimeNeeded: 1
   bubbleChargeTime: 0
---- !u!114 &1925715828507307383
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 671850495204827739}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09f9165b49017ef4da64289eb382927e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  cannonPWRUpDuration: 1
 --- !u!135 &-3073846454450332361
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -315,3 +324,15 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &14118674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671850495204827739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8664451698bcd3f4a8caa57f8329a77d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

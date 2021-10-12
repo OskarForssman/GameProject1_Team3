@@ -2781,12 +2781,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   source: {fileID: 1174044708}
   shootBubbleSound: {fileID: 8300000, guid: 58bc2182ee2c84d4091e9f77cdbdf05e, type: 3}
-  shootBigBubbleSound: {fileID: 0}
-  bubblePopSound: {fileID: 0}
+  shootBigBubbleSound: {fileID: 8300000, guid: bb4885cc84683d340ab42ee2d94607c0, type: 3}
+  bubblePopSound: {fileID: 8300000, guid: 7bb11e092492c11449adcebce4275ea6, type: 3}
   jumpSound: {fileID: 8300000, guid: da52c094af31c5447a84e5d5071c272c, type: 3}
-  bubbleJumpSound: {fileID: 0}
-  bubbleChargeSound: {fileID: 0}
-  stepOnEnemy: {fileID: 0}
+  bubbleJumpSound: {fileID: 8300000, guid: ce5ab82a1bd0eaf47a19cef4ad4bc7b8, type: 3}
+  bubbleChargeSound: {fileID: 8300000, guid: d25cbc11def67854d9a0d985a5130aa8, type: 3}
+  stepOnEnemy: {fileID: 8300000, guid: f91ee12c55ae5ab4da22e13ad88a1a5e, type: 3}
 --- !u!4 &1174044710
 Transform:
   m_ObjectHideFlags: 0
