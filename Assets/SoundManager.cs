@@ -7,6 +7,8 @@ public class SoundManager : MonoBehaviour
 {
     public AudioSource source;
     public AudioClip shootBubbleSound, shootBigBubbleSound, bubblePopSound, jumpSound, bubbleJumpSound, bubbleChargeSound, stepOnEnemy;
+    private float chargeTimer = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +20,9 @@ public class SoundManager : MonoBehaviour
     {
         PlayNormalJump();
         PlayNormalShot();
+        PlayChargeShot();
+
+
     }
 
     void PlayNormalJump()
@@ -28,11 +33,28 @@ public class SoundManager : MonoBehaviour
         }
     }
 
+
     void PlayNormalShot()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyUp(KeyCode.Mouse0))
         {
+            
+        }
+    }
+
+    void PlayChargeShot()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            source.PlayOneShot(bubbleChargeSound);
+        }
+
+        if (Input.GetKeyUp(KeyCode.Mouse0))
+        {
+            source.Stop();
             source.PlayOneShot(shootBubbleSound);
         }
     }
+
+
 }
