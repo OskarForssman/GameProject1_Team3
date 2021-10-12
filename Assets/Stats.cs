@@ -56,6 +56,10 @@ public class Stats : MonoBehaviour
         
     }
 
+    public void setInval(float time)
+    {
+        damageInvulnLeft = time;
+    }
 
     public void TakeDamage(int _DMGAmount)
     {
