@@ -15,12 +15,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float maxFallSpeed;
 
     [SerializeField] private LayerMask groundLayerMask;
-  
+
     #endregion
 
 
     #region Private Variables
-
     public Vector2 velocity; 
     public bool grounded;
 
@@ -28,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
 
     UnitInputs input;
     CharacterController controller;
+   
 
     #endregion
 
@@ -35,7 +35,13 @@ public class PlayerMovement : MonoBehaviour
 
     #region Unity Methods
 
-    
+    public void Awake()
+    {
+
+        input = GetComponent<UnitInputs>();
+        controller = GetComponent<CharacterController>();
+
+    }
     public void Update()
     {
         
@@ -46,6 +52,7 @@ public class PlayerMovement : MonoBehaviour
         if (grounded)
         {
             CanJump(input.jumpInput);
+            
         }
         else
         {
@@ -53,13 +60,10 @@ public class PlayerMovement : MonoBehaviour
         }
 
         ApplyMovement();
+      
     }
 
-    public void Awake()
-    {
-        input = GetComponent<UnitInputs>();
-        controller = GetComponent<CharacterController>();
-    }
+   
 
 
     #endregion
@@ -110,6 +114,9 @@ public class PlayerMovement : MonoBehaviour
         if (_jumpInput)
         {
             velocity.y = jumpSpeed;
+
+            
+
         }
         
     }
@@ -125,6 +132,11 @@ public class PlayerMovement : MonoBehaviour
     public void Bounce(float _bounciness)
     {
         velocity.y = _bounciness;
+    }
+
+   public float getVelcoity()
+    {
+        return velocity.y;
     }
 
     #endregion
