@@ -26,6 +26,7 @@ public class ShotBubbleThatReflect : MonoBehaviour
     [Header("Bubble Charging Properties:")]
     [SerializeField] float bubbleChargeTimeNeeded;
     public float bubbleChargeTime;
+    public float cannonPWRUpDuration;
    
     public void Awake()
     {
@@ -34,23 +35,7 @@ public class ShotBubbleThatReflect : MonoBehaviour
     }
     void Update()
     {
-        /*
-        if (input.spawnBubblebehind && Time.time> nextFire)
-        {
-            nextFire = Time.time + fireRateInsecbig;
-            spawnBigJumpableBubble(-1);
-        }
-        if (input.spawnBubbleforward && Time.time > nextFire)
-        {
-            nextFire = Time.time + fireRateInsecbig;
-            spawnBigJumpableBubble(1);
-        }
-        if (input.shootReflectBubble && Time.time > nextFire)
-        {
-            nextFire = Time.time + fireRateInsecSmall;
-            shootSmallBubble();
-        }
-        */
+        cannonPWRUpDuration -= Time.deltaTime;
         
 
         if (input.shootReleaseInput)
@@ -68,6 +53,10 @@ public class ShotBubbleThatReflect : MonoBehaviour
 
         if (input.shootHoldInput)
         {
+            if (cannonPWRUpDuration > 0)
+            {
+                bubbleChargeTime += Time.deltaTime;
+            }
             bubbleChargeTime += Time.deltaTime;
             bubbleChargeTime = Mathf.Clamp(bubbleChargeTime, 0, bubbleChargeTimeNeeded);
         }
