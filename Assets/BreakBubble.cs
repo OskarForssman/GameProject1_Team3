@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BreakBubble : MonoBehaviour
 {
+    SoundManager sound;
     public float bubblepopinthisamountofsec = 5f;
     private float timeLeft;
     [SerializeField] LayerMask enemyLayerMask;
@@ -15,9 +16,6 @@ public class BreakBubble : MonoBehaviour
     
     public void Update()
     {
-        //Destroy(gameObject, bubblepopinthisamountofsec); //This skips the DestroyBubble method, so it never unsets the enemies isTrapped status
-        
-
         Collider[] hit = Physics.OverlapSphere(transform.position, colliderRadius, enemyLayerMask);
         if (hit.Length != 0)
         {
@@ -67,9 +65,10 @@ public class BreakBubble : MonoBehaviour
             trapper.DamageTrapped();
             trapper.UnsetTrapped();
         }
-        
         Destroy(gameObject);
     }
+
+
 
     public void DestroyBubbleSafe() //Destroys bubble except trapped is safe
     {
@@ -93,11 +92,18 @@ public class BreakBubble : MonoBehaviour
             trapper = GetComponent<BubbleTrapper>();
         }
         timeLeft = bubblepopinthisamountofsec;
+        sound = FindObjectOfType<SoundManager>();
         
     }
 
     void OnBecameInvisible()
     {
         DestroyBubble();
+    }
+
+    public void OnDestroy()
+    {
+        //sound.PlayBubbleJumpSound();
+        
     }
 }
