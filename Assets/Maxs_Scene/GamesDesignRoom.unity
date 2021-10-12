@@ -1153,6 +1153,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4096
   colliderRadius: 0.8
+  hpgain: 1
+  inviciblesec: 3
+  bubblechargetime: 0
+  stonesec: 5
 --- !u!1 &528297992
 GameObject:
   m_ObjectHideFlags: 0
@@ -2795,7 +2799,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1202406965
 GameObject:
