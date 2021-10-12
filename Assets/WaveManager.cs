@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WaveManager : MonoBehaviour
 {
@@ -51,7 +52,7 @@ public class WaveManager : MonoBehaviour
     private void SetWave(int _waveIndex)
     {
         currentWave = waveList[_waveIndex];
-        timeLeftOfWave = currentWave.timeToCompleteWave;
+        timeLeftOfWave += currentWave.timeToCompleteWave;
         enemiesLeft = currentWave.enemiesPerWave;
         spawnIntervalRoutine = StartCoroutine(SpawnIntervalCoroutine(currentWave.enemySpawnInterval));
     }
@@ -95,6 +96,7 @@ public class WaveManager : MonoBehaviour
         if (timeLeftOfWave <= 0)
         {
             Debug.Log("Times up!");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("endScene");
         }
     }
 
