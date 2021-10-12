@@ -97,6 +97,6 @@ public class Stats : MonoBehaviour
 
     public void OnDestroy()
     {
-        Instantiate(deathParticle, transform.position, Quaternion.identity);
+        Instantiate(deathParticle, transform.position, Quaternion.identity); //This causes an error since instantiating things when the scene unloads is kind of weird..
     }
 }
