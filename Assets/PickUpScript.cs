@@ -21,35 +21,47 @@ public class PickUpScript : MonoBehaviour
         //stats
         
     }
-    void Update()
+
+
+
+
+    void OnControllerColliderHit(ControllerColliderHit hit)
     {
-       
-        Collider[] hit = Physics.OverlapSphere(transform.position, colliderRadius, enemyLayerMask);
-        if (hit.Length > 0)
-        {
-         switch (hit[0].tag)
+             
+            switch (hit.transform.tag)
             {
                 case "Cannon":
-                    reflect.bubbleChargeTime=bubblechargetime;
+                    reflect.bubbleChargeTime = bubblechargetime;
+            
+                Destroy(GameObject.FindGameObjectWithTag(hit.transform.tag));
                     break;
                 case "Invincible":
                     stats.setInval(inviciblesec);
-                      break;
+                Destroy(GameObject.FindGameObjectWithTag(hit.transform.tag));
+                break;
                 case "HP":
-                  // stats.health++;
-                    break;
+                     stats.health=stats.health+1;
+                Destroy(GameObject.FindGameObjectWithTag(hit.transform.tag));
+                break;
                 case "Random":
-                      break;
+                    break;
                 case "Stone":
                     gameObject.GetComponent<InputManager>().enabled = false;
-                    StartCoroutine(Timer());
+                Destroy(GameObject.FindGameObjectWithTag(hit.transform.tag));
+                StartCoroutine(Timer());
 
                     break;
             }
 
-        }
         
+    
+      
+       
     }
+
+
+      
+    
     IEnumerator Timer()
     {
       
