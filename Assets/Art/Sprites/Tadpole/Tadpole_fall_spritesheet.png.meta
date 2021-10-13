@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 947bed3eaed2b60498884825e55d3900
+guid: 745035d8c96c9c04faeb23807000c42e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1493348226316882679
-    second: Tadpole_fall_0
+      213: -5279429305833372562
+    second: Tadpole_fall_spritesheet_0
+  - first:
+      213: -6969633547383965768
+    second: Tadpole_fall_spritesheet_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -49,7 +52,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 120
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -94,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tadpole_fall_0
+      name: Tadpole_fall_spritesheet_0
       rect:
         serializedVersion: 2
         x: 159
-        y: 44
+        y: 614
         width: 306
-        height: 202
+        height: 201
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -108,8 +111,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f2d39bbc4079b410800000000000000
-      internalID: 1493348226316882679
+      spriteID: e64c3099403bbb6b0800000000000000
+      internalID: -5279429305833372562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tadpole_fall_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 158
+        width: 299
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b778812733e64f90800000000000000
+      internalID: -6969633547383965768
       vertices: []
       indices: 
       edges: []
