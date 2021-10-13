@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7783541224783307859}
   - component: {fileID: 5177286285656399590}
+  - component: {fileID: 7008976410294527426}
   m_Layer: 0
   m_Name: Tadpole_spike_PNG
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8624028897207419589}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.215, z: 0}
+  m_LocalPosition: {x: 0, y: 0.262, z: 0}
   m_LocalScale: {x: 0.58757, y: 0.58757, z: 0.58757}
   m_Children: []
   m_Father: {fileID: 8734954354809780677}
@@ -71,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 96b121d021d20c946913f9ee57d8ff4e, type: 3}
+  m_Sprite: {fileID: -6024591647134109698, guid: 99f78d7d3c9c43d4d9ade6c217d526d4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -82,6 +83,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &7008976410294527426
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8624028897207419589}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5abe98fa1198819468b74d685f1a1aac, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!135 &-4571573507517958267
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -193,6 +213,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1322360153364226973, guid: 3477f38801859dd4d961f4123b9c15ef, type: 3}
+      propertyPath: moveSpeed
+      value: 3.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1322360153364226974, guid: 3477f38801859dd4d961f4123b9c15ef, type: 3}
       propertyPath: m_SlopeLimit
       value: 65
@@ -207,7 +231,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1322360153364226975, guid: 3477f38801859dd4d961f4123b9c15ef, type: 3}
       propertyPath: health
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1322360153364226975, guid: 3477f38801859dd4d961f4123b9c15ef, type: 3}
       propertyPath: deathParticle
