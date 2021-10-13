@@ -11,10 +11,7 @@ public class SpawnPickup : MonoBehaviour
     
     List<GameObject> popups;
     
-    float destroybubble;
-
-    public bool spawnPopu;
-    public bool destroypoopup;
+   
     void Start()
     {
         spawnPoints = SetSpawnPoints(spawnPointFolder);
