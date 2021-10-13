@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5531406043366454701}
   - component: {fileID: 5531406043366454702}
-  - component: {fileID: 5531406043366454703}
   - component: {fileID: 3327675853799513709}
+  - component: {fileID: 3951633698115741078}
   m_Layer: 12
   m_Name: invincible
   m_TagString: Invincible
@@ -84,19 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!135 &5531406043366454703
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5531406043366454696}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.6207199
-  m_Center: {x: 0.1396656, y: -1.3048136, z: 0}
 --- !u!114 &3327675853799513709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,3 +100,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   colliderRadius: 0.8
+--- !u!65 &3951633698115741078
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5531406043366454696}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 12.33, y: 14.58, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
