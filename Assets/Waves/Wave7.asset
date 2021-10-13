@@ -10,13 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc3bb7a7b59a60842b6994eecbd8af67, type: 3}
-  m_Name: Wave-2
+  m_Name: Wave7
   m_EditorClassIdentifier: 
-  timeToCompleteWave: 30
-  enemiesPerWave: 4
-  enemiesOnScreen: 2
-  enemySpawnInterval: 0.5
+  timeToCompleteWave: 40
+  enemiesPerWave: 10
+  enemiesOnScreen: 6
+  enemySpawnInterval: 2
   enemyPrefabList:
-  - prefab: {fileID: 8734954354809780686, guid: 1fe509fd7a3a1d34a80692bf86021586, type: 3}
-    weight: 30
+  - prefab: {fileID: 2398418533597617267, guid: f295f702eb67d2a4ea8586a54eef0fd2, type: 3}
+    weight: 50
+  - prefab: {fileID: 8734954354809780686, guid: addcc7914a0881e46bd8a36e6c2b9073, type: 3}
+    weight: 50
   spawnPointFolder: {fileID: 0}
