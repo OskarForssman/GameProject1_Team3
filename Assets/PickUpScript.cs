@@ -11,15 +11,19 @@ public class PickUpScript : MonoBehaviour
     [SerializeField] float inviciblesec;
     [SerializeField] float bubblechargetime;
     [SerializeField] float stonesec;
+    [SerializeField] GameObject wavemanger;
+    WaveManager manager;
+    public float timetoaddforWave;
     Stats stats;
-  
+   
     private void Awake()
     {
         reflect = GetComponent<ShotBubbleThatReflect>();
         stats = GetComponent<Stats>();
-        //Cannonpowerupduration
-        //stats
         
+
+
+
     }
 
 
@@ -31,24 +35,25 @@ public class PickUpScript : MonoBehaviour
             switch (hit.transform.tag)
             {
                 case "Cannon":
-                    reflect.bubbleChargeTime = bubblechargetime;
-            
-                Destroy(GameObject.FindGameObjectWithTag(hit.transform.tag));
-                    break;
+                reflect.bubbleChargeTime = bubblechargetime;
+                Destroy(hit.gameObject);
+                break;
                 case "Invincible":
                     stats.setInval(inviciblesec);
-                Destroy(GameObject.FindGameObjectWithTag(hit.transform.tag));
+                Destroy(hit.gameObject);
                 break;
                 case "HP":
                      stats.health=stats.health+1;
-                Destroy(GameObject.FindGameObjectWithTag(hit.transform.tag));
+                Destroy(hit.gameObject);
                 break;
                 case "Random":
-                Destroy(GameObject.FindGameObjectWithTag(hit.transform.tag));
+                wavemanger.GetComponent<WaveManager>().timeLeftOfWave= wavemanger.GetComponent<WaveManager>().timeLeftOfWave+ timetoaddforWave;
+                Destroy(hit.gameObject);
                 break;
                 case "Stone":
                     gameObject.GetComponent<InputManager>().enabled = false;
-                Destroy(GameObject.FindGameObjectWithTag(hit.transform.tag));
+                stats.setInval(stonesec);
+                Destroy(hit.gameObject);
                 StartCoroutine(Timer());
 
                     break;
