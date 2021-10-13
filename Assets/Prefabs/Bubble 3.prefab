@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e5c94033a68f8d4fac561db5d578a89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bubblepopinthisamountofsec: 7.5
+  bubblepopinthisamountofsec: 9
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 512
