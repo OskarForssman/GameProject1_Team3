@@ -5448,9 +5448,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveList:
-  - {fileID: 11400000, guid: dd82536c2e679da43b4ec452181b1c60, type: 2}
-  - {fileID: 11400000, guid: 1b66c8525a8e8ba44afeca24f6cd3b6f, type: 2}
-  - {fileID: 11400000, guid: 7ffc4295295ad9748892ab107af9054e, type: 2}
+  - {fileID: 11400000, guid: b2ea379c5e80c2f4fb935b5ab2991077, type: 2}
+  - {fileID: 11400000, guid: 7dc2e6709ba7f0a48bd3293366ac4a30, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   enemiesLeft: 0
   enemiesOnScreen: 0
   timeLeftOfWave: 0
