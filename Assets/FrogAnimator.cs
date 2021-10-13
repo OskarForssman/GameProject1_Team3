@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class FrogAnimator : MonoBehaviour
 {
-    CharacterController chara;
+    PlayerMovement move;
     Animator anim;
 
     public void Awake()
     {
-        chara = GetComponent<CharacterController>();
         anim = GetComponentInChildren<Animator>();
+        move = GetComponent<PlayerMovement>();
     }
     private void Update()
     {
-        if (chara.isGrounded)
+        if (move.grounded)
         {
             anim.Play("Jump", 0, 0);
         }
