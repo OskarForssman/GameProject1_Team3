@@ -103,8 +103,4 @@ public class Stats : MonoBehaviour
         
     }
 
-    public void OnDestroy()
-    {
-        
-    }
 }

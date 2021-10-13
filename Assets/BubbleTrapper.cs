@@ -18,7 +18,7 @@ public class BubbleTrapper : MonoBehaviour
     public void DamageTrapped()
     {
         Debug.Log("doublepop");
-        trappedStats.TakeDamage(3);
+        trappedStats.TakeDamage(6);
     }
 
     public void SetTrapped(Transform _transform)

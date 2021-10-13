@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class WaveManager : MonoBehaviour
 {
     SpawnManager spawning;
+    [SerializeField] GameObject waveDisplayObject;
 
     #region Public Variables
 
@@ -13,6 +14,7 @@ public class WaveManager : MonoBehaviour
     public int enemiesLeft; //How many enemies that need to be defeated until next wave
     public int enemiesOnScreen;
     public float timeLeftOfWave; //How long until you lose the wave
+    public int waveIndex = 0; //What wave is it right now
 
     #endregion
 
@@ -26,7 +28,7 @@ public class WaveManager : MonoBehaviour
 
     #region Private Variables
 
-    private int waveIndex = 0; //What wave is it right now
+    
     
     private Wave currentWave; //The data for the current wave
 
@@ -47,6 +49,14 @@ public class WaveManager : MonoBehaviour
     }
     Coroutine spawnIntervalRoutine;
 
+    IEnumerator DisplayNewWave(float _timeDisplayed)
+    {
+        waveDisplayObject.SetActive(true);
+        yield return new WaitForSeconds(_timeDisplayed);
+        waveDisplayObject.SetActive(false);
+    }
+    Coroutine displayWaveRoutine;
+
     #endregion
 
 
@@ -62,6 +72,7 @@ public class WaveManager : MonoBehaviour
         timeLeftOfWave += currentWave.timeToCompleteWave;
         enemiesLeft = currentWave.enemiesPerWave;
         spawnIntervalRoutine = StartCoroutine(SpawnIntervalCoroutine(currentWave.enemySpawnInterval));
+        displayWaveRoutine = StartCoroutine(DisplayNewWave(4.5f));
     }
 
     private void NextWave()
