@@ -6,12 +6,16 @@ public class PlayerAnimator : MonoBehaviour
 {
     Animator anim;
     InputManager input;
+    PlayerMovement move;
+    CharacterController character;
     
 
     public void Awake()
     {
         anim = GetComponentInChildren<Animator>();
         input = GetComponent<InputManager>();
+        move = GetComponent<PlayerMovement>();
+        character = GetComponent<CharacterController>();
     }
 
     public void Update()
@@ -32,6 +36,10 @@ public class PlayerAnimator : MonoBehaviour
         {
             anim.SetBool("Walking", false);
         }
+        anim.SetFloat("RiseOrFall", move.velocity.y);
+        if (move.grounded) { anim.SetBool("Land", true); }
+        else
+        { anim.SetBool("Land", false); };
     }
 
 
