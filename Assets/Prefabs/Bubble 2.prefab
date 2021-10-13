@@ -168,7 +168,7 @@ MonoBehaviour:
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 512
-  colliderRadius: 0.61
+  colliderRadius: 0.49
   willTrap: 0
   bubblePop: {fileID: 1511839536400694499, guid: 2a0410e4b8ae07c4ea1443f8a679f408, type: 3}
   trapper: {fileID: 0}
