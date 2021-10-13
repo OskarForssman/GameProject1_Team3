@@ -16,6 +16,13 @@ public class WaveManager : MonoBehaviour
 
     #endregion
 
+    IEnumerator GameOverPauseCoroutine(float _time)
+    {
+        yield return new WaitForSeconds(_time);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("endScene");
+    }
+    Coroutine endRoutine;
+
 
     #region Private Variables
 
@@ -78,7 +85,11 @@ public class WaveManager : MonoBehaviour
         {
             NextWave();
         }
+
+        
     }
+    
+    
 
     public void Awake()
     {
@@ -96,7 +107,7 @@ public class WaveManager : MonoBehaviour
         if (timeLeftOfWave <= 0)
         {
             Debug.Log("Times up!");
-            UnityEngine.SceneManagement.SceneManager.LoadScene("endScene");
+            EndGame();
         }
     }
 
@@ -105,5 +116,8 @@ public class WaveManager : MonoBehaviour
         timeLeftOfWave = timeLeftOfWave + 5f;
     }
 
-
+    public void EndGame()
+    {
+        endRoutine = StartCoroutine(GameOverPauseCoroutine(3f));
+    }
 }
