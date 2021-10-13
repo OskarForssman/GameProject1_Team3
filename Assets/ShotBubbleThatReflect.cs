@@ -36,10 +36,11 @@ public class ShotBubbleThatReflect : MonoBehaviour
     void Update()
     {
         cannonPWRUpDuration -= Time.deltaTime;
-        
+        nextFire -= Time.deltaTime;
 
-        if (input.shootReleaseInput)
+        if (input.shootReleaseInput && nextFire < 0)
         {
+            nextFire = fireRateInsecSmall;
             anim.Play("Shoot", 0, 0);
             if (bubbleChargeTime == bubbleChargeTimeNeeded)
             {
