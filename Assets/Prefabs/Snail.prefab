@@ -54,6 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7763019265703470669}
   - component: {fileID: 2016821638677337791}
+  - component: {fileID: 1922961112}
   m_Layer: 9
   m_Name: Snail_PNG
   m_TagString: Untagged
@@ -69,7 +70,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7450381394465437920}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.161, z: 0}
   m_LocalScale: {x: 0.40330002, y: 0.40330002, z: 0.40330002}
   m_Children: []
   m_Father: {fileID: 172022398957693117}
@@ -115,7 +116,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3ccdcf5c24cd3184196e83c080aa0906, type: 3}
+  m_Sprite: {fileID: 166646531863760514, guid: 6642aacf38c3d444284292981f92346b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -126,6 +127,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1922961112
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7450381394465437920}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1ae24e3284badae4daf46630de22cec5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1169479017882929953
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -175,11 +195,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1322360153364226972, guid: 3477f38801859dd4d961f4123b9c15ef, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.47722512
+      value: -3.959155
       objectReference: {fileID: 0}
     - target: {fileID: 1322360153364226972, guid: 3477f38801859dd4d961f4123b9c15ef, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.380065
+      value: 0.9332423
       objectReference: {fileID: 0}
     - target: {fileID: 1322360153364226972, guid: 3477f38801859dd4d961f4123b9c15ef, type: 3}
       propertyPath: m_LocalPosition.z
