@@ -5511,9 +5511,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waveDisplayObject: {fileID: 1455982310}
   waveList:
-  - {fileID: 11400000, guid: dd82536c2e679da43b4ec452181b1c60, type: 2}
-  - {fileID: 11400000, guid: 1b66c8525a8e8ba44afeca24f6cd3b6f, type: 2}
-  - {fileID: 11400000, guid: 7ffc4295295ad9748892ab107af9054e, type: 2}
+  - {fileID: 11400000, guid: b2ea379c5e80c2f4fb935b5ab2991077, type: 2}
+  - {fileID: 11400000, guid: 7dc2e6709ba7f0a48bd3293366ac4a30, type: 2}
+  - {fileID: 11400000, guid: b977e0e910d59c04fb73f22a9aaaaf35, type: 2}
+  - {fileID: 11400000, guid: 275d790dfaa09c0439dfc72f267f7d75, type: 2}
+  - {fileID: 11400000, guid: 31b68cc6c56ed2b48af2d4d48b57fb45, type: 2}
+  - {fileID: 11400000, guid: db010dba7dc16a7459f294c0d0c4a33a, type: 2}
+  - {fileID: 11400000, guid: 6cc3dcea4076d2f48877241d22333228, type: 2}
   enemiesLeft: 0
   enemiesOnScreen: 0
   timeLeftOfWave: 0

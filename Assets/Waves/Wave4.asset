@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Wave4
   m_EditorClassIdentifier: 
   timeToCompleteWave: 30
-  enemiesPerWave: 10
+  enemiesPerWave: 8
   enemiesOnScreen: 6
   enemySpawnInterval: 2
   enemyPrefabList:
