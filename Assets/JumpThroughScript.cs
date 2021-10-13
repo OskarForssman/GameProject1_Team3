@@ -14,11 +14,7 @@ public class JumpThroughScript : MonoBehaviour
             float player = GameObject.Find("PlayerFish").GetComponent<PlayerMovement>().velocity.y;
             CheckIFColliderActive(player);
         }
-        if (GameObject.Find("Frog"))
-        {
-            float frog = GameObject.Find("Frog").GetComponent<PlayerMovement>().velocity.y;
-            CheckIFColliderActive(frog);
-        }
+      
 
     }
 
