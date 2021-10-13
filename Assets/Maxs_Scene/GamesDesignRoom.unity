@@ -1086,6 +1086,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -80
       objectReference: {fileID: 0}
+    - target: {fileID: 4842487126973481925, guid: fafa3afbde713be47b573b1932ec2986, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 300a987fbbfd02c4e96242d9bedec523, type: 3}
     - target: {fileID: 4842487126988024502, guid: fafa3afbde713be47b573b1932ec2986, type: 3}
       propertyPath: m_Camera
       value: 
@@ -1202,6 +1206,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -80
       objectReference: {fileID: 0}
+    - target: {fileID: 4842487127093818821, guid: fafa3afbde713be47b573b1932ec2986, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8b0dcd6dd46f3e942b20d9a229250916, type: 3}
+    - target: {fileID: 4842487127922520756, guid: fafa3afbde713be47b573b1932ec2986, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 47ef5f028d94d29439369dd7ff4a6f67, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fafa3afbde713be47b573b1932ec2986, type: 3}
 --- !u!1 &420415047 stripped
@@ -1474,7 +1486,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4096
   colliderRadius: 1
-  hpgain: 0
   inviciblesec: 0
   bubblechargetime: 0
   stonesec: 0
@@ -2190,6 +2201,9 @@ MonoBehaviour:
   - {fileID: 2122664159939178493, guid: 5a611a5a8a6402348a8cd55a21766cc0, type: 3}
   spawnPoints: []
   timertospawnpopup: 5
+  destroypopup: 0
+  spawnPopu: 0
+  destroypoopup: 0
 --- !u!4 &833464843
 Transform:
   m_ObjectHideFlags: 0
