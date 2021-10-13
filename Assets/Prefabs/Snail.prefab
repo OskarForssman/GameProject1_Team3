@@ -11,8 +11,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.65
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.5313596
+  m_Center: {x: 0, y: -0.11864033, z: 0}
 --- !u!114 &-7222698409380808816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39,7 +39,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colliderRadius: 0.46
-  colliderOffsetX: 0.87
+  colliderOffsetX: 0.69
   colliderOffsetY: -0.29
   playerLayerMask:
     serializedVersion: 2
@@ -232,6 +232,14 @@ PrefabInstance:
     - target: {fileID: 1322360153364226972, guid: 3477f38801859dd4d961f4123b9c15ef, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322360153364226974, guid: 3477f38801859dd4d961f4123b9c15ef, type: 3}
+      propertyPath: m_Height
+      value: 0.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322360153364226974, guid: 3477f38801859dd4d961f4123b9c15ef, type: 3}
+      propertyPath: m_Radius
+      value: 0.41
       objectReference: {fileID: 0}
     - target: {fileID: 1322360153364226974, guid: 3477f38801859dd4d961f4123b9c15ef, type: 3}
       propertyPath: m_SlopeLimit
