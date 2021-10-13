@@ -1233,19 +1233,6 @@ MonoBehaviour:
   moveSpeed: 3
   isPlatformRotate: 0
   rotateSpeed: 0
---- !u!114 &420415050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 420415047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45154b7ff0b50c84488c85a171ac870c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collider: {fileID: 420415048}
 --- !u!1 &442770923
 GameObject:
   m_ObjectHideFlags: 0
