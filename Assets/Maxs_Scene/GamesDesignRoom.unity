@@ -1489,6 +1489,8 @@ MonoBehaviour:
   inviciblesec: 3
   bubblechargetime: 0
   stonesec: 3
+  wavemanger: {fileID: 2003986483}
+  timetoaddforWave: 5
 --- !u!1001 &510768271
 PrefabInstance:
   m_ObjectHideFlags: 0

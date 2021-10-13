@@ -11,16 +11,19 @@ public class PickUpScript : MonoBehaviour
     [SerializeField] float inviciblesec;
     [SerializeField] float bubblechargetime;
     [SerializeField] float stonesec;
+    [SerializeField] GameObject wavemanger;
+    WaveManager manager;
+    public float timetoaddforWave;
     Stats stats;
-    WaveManager manager; 
+   
     private void Awake()
     {
         reflect = GetComponent<ShotBubbleThatReflect>();
         stats = GetComponent<Stats>();
-        manager = GetComponent<WaveManager>();
-        //Cannonpowerupduration
-        //stats
         
+
+
+
     }
 
 
@@ -44,7 +47,7 @@ public class PickUpScript : MonoBehaviour
                 Destroy(hit.gameObject);
                 break;
                 case "Random":
-
+                wavemanger.GetComponent<WaveManager>().timeLeftOfWave= wavemanger.GetComponent<WaveManager>().timeLeftOfWave+ timetoaddforWave;
                 Destroy(hit.gameObject);
                 break;
                 case "Stone":
