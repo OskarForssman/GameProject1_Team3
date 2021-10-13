@@ -10,6 +10,7 @@ public class BreakBubble : MonoBehaviour
     [SerializeField] LayerMask enemyLayerMask;
     [SerializeField] float colliderRadius;
     [SerializeField] bool willTrap; //Wether or not this bubble will trap hit enemies
+    [SerializeField] GameObject bubblePop;
 
     [SerializeField] BubbleTrapper trapper;
 
@@ -65,6 +66,7 @@ public class BreakBubble : MonoBehaviour
             trapper.DamageTrapped();
             trapper.UnsetTrapped();
         }
+        Instantiate(bubblePop, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 
@@ -76,6 +78,7 @@ public class BreakBubble : MonoBehaviour
         {
             trapper.UnsetTrapped();
         }
+        Instantiate(bubblePop, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 

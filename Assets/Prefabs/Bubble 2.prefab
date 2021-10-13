@@ -170,6 +170,7 @@ MonoBehaviour:
     m_Bits: 512
   colliderRadius: 0.61
   willTrap: 0
+  bubblePop: {fileID: 1511839536400694499, guid: 2a0410e4b8ae07c4ea1443f8a679f408, type: 3}
   trapper: {fileID: 0}
 --- !u!114 &1858292173557253018
 MonoBehaviour:
