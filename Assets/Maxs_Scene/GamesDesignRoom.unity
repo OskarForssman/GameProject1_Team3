@@ -1413,32 +1413,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: badd64e92abb0f941a894cbbf8e482df, type: 3}
---- !u!1 &509486543 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 671850495204827739, guid: 97f89031f8f155e418a7fb128555afc5, type: 3}
-  m_PrefabInstance: {fileID: 1126006232}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &509486544
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 509486543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6df0cce43c146d440beac58d39ba504e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyLayerMask:
-    serializedVersion: 2
-    m_Bits: 4096
-  colliderRadius: 1
-  inviciblesec: 3
-  bubblechargetime: 0
-  stonesec: 3
-  wavemanger: {fileID: 2003986483}
-  timetoaddforWave: 5
 --- !u!1001 &510768271
 PrefabInstance:
   m_ObjectHideFlags: 0
