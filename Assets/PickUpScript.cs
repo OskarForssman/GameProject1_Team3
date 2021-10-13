@@ -44,6 +44,7 @@ public class PickUpScript : MonoBehaviour
                 Destroy(GameObject.FindGameObjectWithTag(hit.transform.tag));
                 break;
                 case "Random":
+                
                 Destroy(GameObject.FindGameObjectWithTag(hit.transform.tag));
                 break;
                 case "Stone":
