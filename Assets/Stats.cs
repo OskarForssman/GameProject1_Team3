@@ -83,10 +83,7 @@ public class Stats : MonoBehaviour
         }
         
     }
-    public void getHp(int hp)
-    {
-      health=health+hp;
-    }
+    
 
     public void Die()
     {
