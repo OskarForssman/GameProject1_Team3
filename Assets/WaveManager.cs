@@ -100,5 +100,10 @@ public class WaveManager : MonoBehaviour
         }
     }
 
+    public void SetTimeLeftOnWave()
+    {
+        timeLeftOfWave = timeLeftOfWave + 5f;
+    }
+
 
 }
