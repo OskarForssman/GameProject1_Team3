@@ -12,11 +12,12 @@ public class PickUpScript : MonoBehaviour
     [SerializeField] float bubblechargetime;
     [SerializeField] float stonesec;
     Stats stats;
-  
+    WaveManager manager; 
     private void Awake()
     {
         reflect = GetComponent<ShotBubbleThatReflect>();
         stats = GetComponent<Stats>();
+        manager = GetComponent<WaveManager>();
         //Cannonpowerupduration
         //stats
         
@@ -44,10 +45,12 @@ public class PickUpScript : MonoBehaviour
                 Destroy(GameObject.FindGameObjectWithTag(hit.transform.tag));
                 break;
                 case "Random":
+                manager.timeLeftOfWave = manager.timeLeftOfWave + 5;
                 Destroy(GameObject.FindGameObjectWithTag(hit.transform.tag));
                 break;
                 case "Stone":
                     gameObject.GetComponent<InputManager>().enabled = false;
+                stats.setInval(stonesec);
                 Destroy(GameObject.FindGameObjectWithTag(hit.transform.tag));
                 StartCoroutine(Timer());
 

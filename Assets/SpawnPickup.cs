@@ -8,18 +8,14 @@ public class SpawnPickup : MonoBehaviour
     [SerializeField] GameObject[] popup;
     public Vector2[] spawnPoints;
     // Start is called before the first frame update+
-    [SerializeField] float timertospawnpopup;
-    [SerializeField] float destroypopup;
+    
     List<GameObject> popups;
-    float timeLeft;
-    float destroybubble;
-
-    public bool spawnPopu;
-    public bool destroypoopup;
+    
+   
     void Start()
     {
         spawnPoints = SetSpawnPoints(spawnPointFolder);
-         timeLeft = timertospawnpopup;
+       
         popups = new List<GameObject>();
     }
 
@@ -36,6 +32,7 @@ public class SpawnPickup : MonoBehaviour
         {
             SpawnRandomPickUp(1);
         }
+
         if (getAmountofCHilds(2) <= 0)
         {
             SpawnRandomPickUp(2);
@@ -62,13 +59,13 @@ public class SpawnPickup : MonoBehaviour
 
     private void SpawnRandomPickUp(int whichSpawnPoint)
     {
-        
+        Debug.Log("Test");
         int rand = Random.Range(0, 4);
        
            GameObject Activepopup = Instantiate(popup[rand], spawnPoints[whichSpawnPoint], Quaternion.identity);
            Activepopup.transform.SetParent(spawnPointFolder.GetChild(whichSpawnPoint-1));
            popups.Add(Activepopup);
-        timeLeft = timertospawnpopup;
+         
 
 
 
@@ -77,11 +74,12 @@ public class SpawnPickup : MonoBehaviour
    
     public void DestroyPopup()
     {
+       
         for (int i = 0; i < popups.Count; i++)
         {
             Destroy(popups[i]);
-            popups.RemoveAt(i);
         }
+        popups.Clear();
 
 
     }
@@ -92,6 +90,6 @@ public class SpawnPickup : MonoBehaviour
 
     private int  getAmountofCHilds(int x)
     {
-        return   spawnPointFolder.GetChild(x - 1).childCount; ;
+        return   spawnPointFolder.GetChild(x - 1).childCount; 
     }
 }

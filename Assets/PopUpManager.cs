@@ -7,34 +7,38 @@ public class PopUpManager : MonoBehaviour
     public float timebefredestroyPopup;
     public float timerbfrspawn;
     SpawnPickup pickUp;
+    bool trigger;
     // Start is called before the first frame update
-    float timerspawn, timerdestroy;
+    float timerspawn;
 
     void Start()
     {
         pickUp = GetComponent<SpawnPickup>();
-        timerdestroy = timebefredestroyPopup;
         timerspawn = timerbfrspawn;
-
+         trigger=true;
     }
 
     // Update is called once per frame
     void Update()
     {
+       
         timerspawn -= Time.deltaTime;
         if (timerspawn <= 0.0f)
         {
-            spawnthepopus();
+            if (trigger)
+            {
+                spawnthepopus();
+            }
+            else
+            {
+                destroyThePopups();
+            }
+         
+                   
 
         }
 
-
-        timerdestroy -= Time.deltaTime;
-        if (timerdestroy <= 0.0f)
-        {
-            destroyThePopups();
-          
-        }
+      
    
 
     }
@@ -42,11 +46,14 @@ public class PopUpManager : MonoBehaviour
     {
         pickUp.SpawnPopup();
         timerspawn = timerbfrspawn;
+        trigger = false;
     }
 
     void destroyThePopups()
     {
         pickUp.DestroyPopup();
-        timerdestroy = timebefredestroyPopup;
+        timerspawn = timerbfrspawn;
+        trigger = true;
+
     }
 }
