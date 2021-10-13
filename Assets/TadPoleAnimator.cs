@@ -15,7 +15,7 @@ public class TadPoleAnimator : MonoBehaviour
 
     public void Update()
     {
-        if (character.velocity.y <= -0.1)
+        if (!character.isGrounded)
         {
             anim.SetBool("Falling", true);
         }
