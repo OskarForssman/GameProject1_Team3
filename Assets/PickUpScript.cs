@@ -35,7 +35,7 @@ public class PickUpScript : MonoBehaviour
             switch (hit.transform.tag)
             {
                 case "Cannon":
-                reflect.bubbleChargeTime = bubblechargetime;
+                reflect.cannonPWRUpDuration = 0;
                 Destroy(hit.gameObject);
                 break;
                 case "Invincible":
