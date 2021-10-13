@@ -2824,6 +2824,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 509486544, guid: 97f89031f8f155e418a7fb128555afc5, type: 3}
+      propertyPath: stonesec
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 509486544, guid: 97f89031f8f155e418a7fb128555afc5, type: 3}
+      propertyPath: wavemanger
+      value: 
+      objectReference: {fileID: 2003986483}
+    - target: {fileID: 509486544, guid: 97f89031f8f155e418a7fb128555afc5, type: 3}
+      propertyPath: inviciblesec
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 509486544, guid: 97f89031f8f155e418a7fb128555afc5, type: 3}
+      propertyPath: timetoaddforWave
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 671850495134613552, guid: 97f89031f8f155e418a7fb128555afc5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
