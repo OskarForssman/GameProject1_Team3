@@ -35,7 +35,7 @@ public class PickUpScript : MonoBehaviour
             switch (hit.transform.tag)
             {
                 case "Cannon":
-                reflect.cannonPWRUpDuration = 0;
+                reflect.cannonPWRUpDuration = 10;
                 Destroy(hit.gameObject);
                 break;
                 case "Invincible":

@@ -2898,6 +2898,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1433602302}
     - target: {fileID: 671850495204827712, guid: 97f89031f8f155e418a7fb128555afc5, type: 3}
+      propertyPath: smallBubbleForce
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 671850495204827712, guid: 97f89031f8f155e418a7fb128555afc5, type: 3}
       propertyPath: smallFiringOffset
       value: 0.1
       objectReference: {fileID: 0}
@@ -5522,6 +5526,7 @@ MonoBehaviour:
   enemiesOnScreen: 0
   timeLeftOfWave: 0
   waveIndex: 0
+  timeCap: 40
 --- !u!4 &2003986485
 Transform:
   m_ObjectHideFlags: 0
