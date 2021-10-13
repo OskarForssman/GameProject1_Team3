@@ -45,7 +45,7 @@ public class PickUpScript : MonoBehaviour
                 Destroy(GameObject.FindGameObjectWithTag(hit.transform.tag));
                 break;
                 case "Random":
-                manager.timeLeftOfWave = manager.timeLeftOfWave + 5;
+                
                 Destroy(GameObject.FindGameObjectWithTag(hit.transform.tag));
                 break;
                 case "Stone":
