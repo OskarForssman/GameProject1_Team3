@@ -48,6 +48,7 @@ public class PickUpScript : MonoBehaviour
                 break;
                 case "Stone":
                     gameObject.GetComponent<InputManager>().enabled = false;
+                stats.setInval(stonesec);
                 Destroy(GameObject.FindGameObjectWithTag(hit.transform.tag));
                 StartCoroutine(Timer());
 
