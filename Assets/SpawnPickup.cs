@@ -26,16 +26,17 @@ public class SpawnPickup : MonoBehaviour
    public  void SpawnPopup()
     {
 
-            
 
-        if (getAmountofCHilds(1) <= 0)
+        int random1 = Random.Range(1,10);
+        if (getAmountofCHilds(random1) <= 0)
         {
-            SpawnRandomPickUp(1);
+            SpawnRandomPickUp(random1);
         }
 
-        if (getAmountofCHilds(2) <= 0)
+        int random2 = Random.Range(1, 10);
+        if (getAmountofCHilds(random2) <= 0)
         {
-            SpawnRandomPickUp(2);
+            SpawnRandomPickUp(random2);
         }
       
        
@@ -63,7 +64,6 @@ public class SpawnPickup : MonoBehaviour
         int rand = Random.Range(0, 4);
        
            GameObject Activepopup = Instantiate(popup[rand], spawnPoints[whichSpawnPoint], Quaternion.identity);
-           Activepopup.transform.SetParent(spawnPointFolder.GetChild(whichSpawnPoint-1));
            popups.Add(Activepopup);
          
 
