@@ -1474,7 +1474,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4096
   colliderRadius: 1
-  hpgain: 0
   inviciblesec: 0
   bubblechargetime: 0
   stonesec: 0
@@ -2190,6 +2189,9 @@ MonoBehaviour:
   - {fileID: 2122664159939178493, guid: 5a611a5a8a6402348a8cd55a21766cc0, type: 3}
   spawnPoints: []
   timertospawnpopup: 5
+  destroypopup: 0
+  spawnPopu: 0
+  destroypoopup: 0
 --- !u!4 &833464843
 Transform:
   m_ObjectHideFlags: 0
@@ -2861,6 +2863,10 @@ PrefabInstance:
       propertyPath: fireRateInsecSmall
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 671850495204827714, guid: 97f89031f8f155e418a7fb128555afc5, type: 3}
+      propertyPath: wav
+      value: 
+      objectReference: {fileID: 2003986484}
     - target: {fileID: 671850495204827739, guid: 97f89031f8f155e418a7fb128555afc5, type: 3}
       propertyPath: m_Name
       value: PlayerFish

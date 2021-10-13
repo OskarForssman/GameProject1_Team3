@@ -33,17 +33,21 @@ public class UIManager : MonoBehaviour
     // Update the UI information
     private void UpdateUIMsg()
     {
-        // get the health value from player(Stats) to UI
-        string healthValue = stats.health.ToString();
-        health.text = healthValue;
+        if (GameObject.Find("PlayerFish")) //This is really ugly...
+        {
+            // get the health value from player(Stats) to UI
+            string healthValue = stats.health.ToString();
+            health.text = healthValue;
 
-        // get the left enemies number from WavaManager 
-        string leftEnemies = waveManager.enemiesLeft.ToString();
-        enemyNeedToDefeat.text = leftEnemies;
+            // get the left enemies number from WavaManager 
+            string leftEnemies = waveManager.enemiesLeft.ToString();
+            enemyNeedToDefeat.text = leftEnemies;
 
-        // get the left time from WavaManager 
-        string leftTime = waveManager.timeLeftOfWave.ToString();
-        time.text = leftTime;
+            // get the left time from WavaManager 
+            string leftTime = waveManager.timeLeftOfWave.ToString();
+            time.text = leftTime;
+        }
+        
         
     }
 }

@@ -14,6 +14,14 @@ public class WaveManager : MonoBehaviour
     public int enemiesOnScreen;
     public float timeLeftOfWave; //How long until you lose the wave
 
+    public IEnumerator GameEndPauseCoroutine(float _time)
+    {
+        yield return new WaitForSeconds(_time);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("endScene");
+
+    }
+    public Coroutine endRoutine;
+
     #endregion
 
 
@@ -96,8 +104,13 @@ public class WaveManager : MonoBehaviour
         if (timeLeftOfWave <= 0)
         {
             Debug.Log("Times up!");
-            UnityEngine.SceneManagement.SceneManager.LoadScene("endScene");
+            EndGame();
         }
+    }
+
+    public void EndGame()
+    {
+        endRoutine = StartCoroutine(GameEndPauseCoroutine(1f));
     }
 
 

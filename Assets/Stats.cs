@@ -91,16 +91,20 @@ public class Stats : MonoBehaviour
     public void Die()
     {
         deathEvent?.Invoke();
-        
-        Destroy(gameObject);
+        Instantiate(deathParticle, transform.position, Quaternion.identity); //This causes an error since instantiating things when the scene unloads is kind of weird..
         if (isPlayer)
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("endScene");
+            //UnityEngine.SceneManagement.SceneManager.LoadScene("endScene");
+            GameObject gam = GameObject.Find("EnemySpawnerManager");
+            WaveManager wav = gam.GetComponent<WaveManager>();
+            wav.EndGame();
         }
+        Destroy(gameObject);
+        
     }
 
     public void OnDestroy()
     {
-        Instantiate(deathParticle, transform.position, Quaternion.identity); //This causes an error since instantiating things when the scene unloads is kind of weird..
+        
     }
 }
