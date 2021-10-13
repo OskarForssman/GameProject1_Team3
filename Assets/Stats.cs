@@ -2,12 +2,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Stats : MonoBehaviour
 {
     [Header("General Stats:")]
 
     public int health;
+
+    [SerializeField] bool isPlayer;
 
     [Tooltip("How long this character will be immune after taking damage")]
     [SerializeField] float damageInvuln;
@@ -93,6 +96,10 @@ public class Stats : MonoBehaviour
         deathEvent?.Invoke();
         
         Destroy(gameObject);
+        if (isPlayer)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("endScene");
+        }
     }
 
     public void OnDestroy()

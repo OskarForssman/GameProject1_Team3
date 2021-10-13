@@ -9,16 +9,19 @@ public class UIManager : MonoBehaviour
     public UnityEngine.UI.Text health;
     public UnityEngine.UI.Text enemyNeedToDefeat;
     public UnityEngine.UI.Text time;
+    private Stats stats;
 
     private GameObject player;
-    private GameObject waveManager;
+    private WaveManager waveManager;
 
     
     void Start()
     {
        // get the objects that storing the needed information
        player = GameObject.Find("PlayerFish");
-       waveManager = GameObject.Find("EnemySpawnerManager");
+       stats = player.GetComponent<Stats>();
+       GameObject waveManagerObj = GameObject.Find("EnemySpawnerManager");
+       waveManager = waveManagerObj.GetComponent<WaveManager>();
     }
 
     // Update is called once per frame
@@ -31,15 +34,15 @@ public class UIManager : MonoBehaviour
     private void UpdateUIMsg()
     {
         // get the health value from player(Stats) to UI
-        string healthValue = player.GetComponent<Stats>().health.ToString();
+        string healthValue = stats.health.ToString();
         health.text = healthValue;
 
         // get the left enemies number from WavaManager 
-        string leftEnemies = waveManager.GetComponent<WaveManager>().enemiesLeft.ToString();
+        string leftEnemies = waveManager.enemiesLeft.ToString();
         enemyNeedToDefeat.text = leftEnemies;
 
         // get the left time from WavaManager 
-        string leftTime = waveManager.GetComponent<WaveManager>().timeLeftOfWave.ToString();
+        string leftTime = waveManager.timeLeftOfWave.ToString();
         time.text = leftTime;
         
     }

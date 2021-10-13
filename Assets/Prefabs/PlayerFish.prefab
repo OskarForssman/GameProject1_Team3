@@ -120,6 +120,7 @@ GameObject:
   - component: {fileID: 671850495204827712}
   - component: {fileID: -3073846454450332361}
   - component: {fileID: 14118674}
+  - component: {fileID: 509486544}
   m_Layer: 8
   m_Name: PlayerFish
   m_TagString: Player
@@ -244,13 +245,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
+  isPlayer: 1
   damageInvuln: 1
   bounceCooldown: 0
   bubbleImmunity: 0
   bounceImmunity: 0
   spiky: 0
   isTrapped: 0
-  deathParticle: {fileID: 0}
+  deathParticle: {fileID: 1756117777625351211, guid: 5bb1de0ee68eec54fb76d34191cfb991, type: 3}
   damageParticle: {fileID: 1921353632972608777, guid: 7e432fd6f1a1ff440a33e3292c43635a, type: 3}
 --- !u!114 &671850495204827715
 MonoBehaviour:
@@ -338,3 +340,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8664451698bcd3f4a8caa57f8329a77d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &509486544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671850495204827739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6df0cce43c146d440beac58d39ba504e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyLayerMask:
+    serializedVersion: 2
+    m_Bits: 4096
+  colliderRadius: 1
+  hpgain: 0
+  inviciblesec: 0
+  bubblechargetime: 0
+  stonesec: 0
