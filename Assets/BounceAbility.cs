@@ -37,7 +37,7 @@ public class BounceAbility : MonoBehaviour
                     movement.Bounce(bounciness);
                     if (!s.bounceImmunity)
                     {
-                        s.TakeDamage(3);
+                        s.TakeDamage(2);
                     }
                     if (s.spiky)
                     {

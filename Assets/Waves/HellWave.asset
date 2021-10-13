@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: HellWave
   m_EditorClassIdentifier: 
   timeToCompleteWave: 30
-  enemiesPerWave: 10
+  enemiesPerWave: 3
   enemiesOnScreen: 6
   enemySpawnInterval: 0.1
   enemyPrefabList:

@@ -2,12 +2,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Stats : MonoBehaviour
 {
     [Header("General Stats:")]
 
     public int health;
+
+    [SerializeField] bool isPlayer;
 
     [Tooltip("How long this character will be immune after taking damage")]
     [SerializeField] float damageInvuln;
@@ -88,12 +91,16 @@ public class Stats : MonoBehaviour
     public void Die()
     {
         deathEvent?.Invoke();
-        
+        Instantiate(deathParticle, transform.position, Quaternion.identity); //This causes an error since instantiating things when the scene unloads is kind of weird..
+        if (isPlayer)
+        {
+            //UnityEngine.SceneManagement.SceneManager.LoadScene("endScene");
+            GameObject gam = GameObject.Find("EnemySpawnerManager");
+            WaveManager wav = gam.GetComponent<WaveManager>();
+            wav.EndGame();
+        }
         Destroy(gameObject);
+        
     }
 
-    public void OnDestroy()
-    {
-        Instantiate(deathParticle, transform.position, Quaternion.identity); //This causes an error since instantiating things when the scene unloads is kind of weird..
-    }
 }
