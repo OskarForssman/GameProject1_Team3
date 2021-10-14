@@ -28,6 +28,7 @@ public class WaveManager : MonoBehaviour
 
 
     #region Private Variables
+    LightManager light;
 
     
     
@@ -75,6 +76,7 @@ public class WaveManager : MonoBehaviour
         enemiesLeft = currentWave.enemiesPerWave;
         spawnIntervalRoutine = StartCoroutine(SpawnIntervalCoroutine(currentWave.enemySpawnInterval));
         displayWaveRoutine = StartCoroutine(DisplayNewWave(4.5f));
+        light.RandomizeLight();
     }
 
     private void NextWave()
@@ -109,6 +111,7 @@ public class WaveManager : MonoBehaviour
     public void Awake()
     {
         spawning = GetComponent<SpawnManager>();
+        light = GameObject.Find("Global Volume").GetComponent<LightManager>();
     }
 
     public void Start()
