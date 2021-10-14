@@ -22,7 +22,15 @@ public class WaveManager : MonoBehaviour
     IEnumerator GameOverPauseCoroutine(float _time)
     {
         yield return new WaitForSeconds(_time);
-        UnityEngine.SceneManagement.SceneManager.LoadScene("endScene");
+        if (waveIndex >= 5)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("WinScene");
+        }
+        else
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("endScene");
+        }
+        
     }
     Coroutine endRoutine;
 
