@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
 
     UnitInputs input;
     CharacterController controller;
+    SoundManager sound;
    
 
     #endregion
@@ -40,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
 
         input = GetComponent<UnitInputs>();
         controller = GetComponent<CharacterController>();
+        sound = GameObject.Find("SoundManager").GetComponent<SoundManager>();
 
     }
     public void Update()
@@ -114,7 +116,7 @@ public class PlayerMovement : MonoBehaviour
         if (_jumpInput)
         {
             velocity.y = jumpSpeed;
-
+            sound.sources.jump.PlayOneShot(sound.sources.jump.clip);
             
 
         }

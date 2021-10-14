@@ -10,6 +10,7 @@ public class BounceAbility : MonoBehaviour
     CharacterController controller;
     PlayerMovement movement;
     Stats stats;
+    SoundManager sound;
 
     [SerializeField] float bounciness;
 
@@ -19,6 +20,7 @@ public class BounceAbility : MonoBehaviour
         controller = GetComponent<CharacterController>();
         movement = GetComponent<PlayerMovement>();
         stats = GetComponent<Stats>();
+        sound = GameObject.Find("SoundManager").GetComponent<SoundManager>();
     }
 
     public void Update()
@@ -43,7 +45,16 @@ public class BounceAbility : MonoBehaviour
                     {
                         stats.TakeDamage(1);
                     }
-                    
+                    if (s.isBubble)
+                    {
+                        sound.sources.bubbleJump.PlayOneShot(sound.sources.bubbleJump.clip);
+                    }
+                    else
+                    {
+                        sound.sources.enemyStepOn.PlayOneShot(sound.sources.enemyStepOn.clip);
+                    }
+
+
                 }
                     
             }
