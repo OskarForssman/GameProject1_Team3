@@ -97,6 +97,7 @@ public class Stats : MonoBehaviour
             //UnityEngine.SceneManagement.SceneManager.LoadScene("endScene");
             GameObject gam = GameObject.Find("EnemySpawnerManager");
             WaveManager wav = gam.GetComponent<WaveManager>();
+            
             wav.EndGame();
         }
         Destroy(gameObject);

@@ -41,11 +41,13 @@ public class HighScoreManager : MonoBehaviour
         
     }
 
-    public void HighScoreThisRound(int wave)
+    public void HighScoreThisRound()
     {
-               HighScore = (AmountOFtadKilled*PointsTad) + (amountofspikekillec*PointsSpike) + (amountofsnailkilled*PointsSnail) + (amountofFrogkilled*PointsFrog);
-               HighScore *= wave;
-               Debug.Log("HighScore "+HighScore);
+        GameObject gam = GameObject.Find("EnemySpawnerManager");
+        WaveManager wav = gam.GetComponent<WaveManager>();
+        HighScore = (AmountOFtadKilled*PointsTad) + (amountofspikekillec*PointsSpike) + (amountofsnailkilled*PointsSnail) + (amountofFrogkilled*PointsFrog);
+        HighScore *= wav.waveIndex;
+        Debug.Log("HighScore "+HighScore);
         AmountOFtadKilled = 0;
         amountofFrogkilled = 0;
         amountofspikekillec = 0;
