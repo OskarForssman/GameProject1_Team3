@@ -3040,7 +3040,7 @@ PrefabInstance:
       objectReference: {fileID: 2003986483}
     - target: {fileID: 509486544, guid: 97f89031f8f155e418a7fb128555afc5, type: 3}
       propertyPath: inviciblesec
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 509486544, guid: 97f89031f8f155e418a7fb128555afc5, type: 3}
       propertyPath: invinDisplay
