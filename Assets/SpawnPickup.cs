@@ -28,19 +28,25 @@ public class SpawnPickup : MonoBehaviour
 
 
         int random1 = Random.Range(1,10);
+        int random2 = Random.Range(1,10);
+        if (random1 == random2)
+        {
+            random1 = Random.Range(1, 10);
+            random2 = Random.Range(1, 10);
+        }
+        if (random1 != random2) { 
         if (getAmountofCHilds(random1) <= 0)
         {
             SpawnRandomPickUp(random1);
         }
 
-        int random2 = Random.Range(1, 10);
         if (getAmountofCHilds(random2) <= 0)
         {
             SpawnRandomPickUp(random2);
         }
-      
-       
-       
+        }
+
+
 
     }
 
