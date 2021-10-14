@@ -69,7 +69,7 @@ public class SpawnPickup : MonoBehaviour
         
        
        
-           GameObject Activepopup = Instantiate(popup[Random.Range(0, 5)], spawnPoints[whichSpawnPoint], Quaternion.identity);
+           GameObject Activepopup = Instantiate(popup[Random.Range(0, 4)], spawnPoints[whichSpawnPoint], Quaternion.identity);
            popups.Add(Activepopup);
          
 
