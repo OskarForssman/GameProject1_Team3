@@ -44,6 +44,18 @@ MonoBehaviour:
   playerLayerMask:
     serializedVersion: 2
     m_Bits: 256
+--- !u!114 &3600694698280754083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172022398957693110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf65f76879a8d5f4d9220c9aff7c295e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7450381394465437920
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,7 +175,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1322360153364226967, guid: 3477f38801859dd4d961f4123b9c15ef, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: Snail
       objectReference: {fileID: 0}
     - target: {fileID: 1322360153364226968, guid: 3477f38801859dd4d961f4123b9c15ef, type: 3}
       propertyPath: player

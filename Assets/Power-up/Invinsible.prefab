@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 5531406043366454701}
   - component: {fileID: 5531406043366454702}
   - component: {fileID: 3951633698115741078}
+  - component: {fileID: 7992161683761852908}
   m_Layer: 12
-  m_Name: invincible
+  m_Name: Invinsible
   m_TagString: Invincible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,3 +97,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 12.33, y: 14.58, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7992161683761852908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5531406043366454696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62e3623403911b94ebc1cdc5cb96c7e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyTimer: 20

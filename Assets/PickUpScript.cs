@@ -31,7 +31,9 @@ public class PickUpScript : MonoBehaviour
 
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
-             
+
+        
+        
             switch (hit.transform.tag)
             {
                 case "Cannon":

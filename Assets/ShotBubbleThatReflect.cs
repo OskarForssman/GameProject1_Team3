@@ -7,6 +7,7 @@ public class ShotBubbleThatReflect : MonoBehaviour
 
     Animator anim;
     InputManager input;
+    SoundManager sound;
     private float nextFire = 0.0F;
     [SerializeField]  public float fireRateInsecbig = 2F;
     [SerializeField] public float fireRateInsecSmall = 0.2F;
@@ -32,6 +33,7 @@ public class ShotBubbleThatReflect : MonoBehaviour
     {
         input = GetComponent<InputManager>();
         anim = GetComponentInChildren<Animator>();
+        sound = GameObject.Find("SoundManager").GetComponent<SoundManager>();
     }
     void Update()
     {
@@ -67,6 +69,15 @@ public class ShotBubbleThatReflect : MonoBehaviour
         {
             bubbleChargeTime = 0;
         }
+        if (bubbleChargeTime > 0.1)
+        {
+            sound.PlaySound(sound.sources.bubbleCharge);
+        }
+        else
+        {
+            sound.sources.bubbleCharge.Stop();
+        }
+        
     }
     private void spawnBigJumpableBubble(int x)
     {
@@ -93,5 +104,6 @@ public class ShotBubbleThatReflect : MonoBehaviour
         GameObject gam = Instantiate(_prefab, transform.position + _direction * _offset, Quaternion.identity);
         Rigidbody rb = gam.GetComponent<Rigidbody>();
         rb.AddForce(_direction * _force, ForceMode.VelocityChange);
+        sound.PlaySound(sound.sources.shot);
     }
 }

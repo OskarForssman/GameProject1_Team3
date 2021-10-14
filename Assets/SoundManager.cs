@@ -5,8 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class SoundManager : MonoBehaviour
 {
-    public AudioSource source;
-    public AudioClip shootBubbleSound, shootBigBubbleSound, bubblePopSound, jumpSound, bubbleJumpSound, bubbleChargeSound, stepOnEnemy;
+
+
+    [System.Serializable] public struct Sources
+    {
+        public AudioSource bubbleCharge;
+        public AudioSource bubbleJump;
+        public AudioSource jump;
+        public AudioSource enemyStepOn;
+        public AudioSource damage;
+        public AudioSource shot;
+        public AudioSource pop;
+    };
+    public Sources sources = new Sources { };
+
+    [HideInInspector] public float charge;
 
     // Start is called before the first frame update
     void Start()
@@ -15,50 +28,23 @@ public class SoundManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
+        /*
         PlayNormalJump();
         PlayNormalShot();
         PlayChargeShot();
+        */
 
 
     }
 
-    void PlayNormalJump()
+    public void PlaySound(AudioSource _source)
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            source.PlayOneShot(jumpSound);
-        }
+        _source.PlayOneShot(_source.clip);
     }
 
 
-    void PlayNormalShot()
-    {
-        if (Input.GetKeyUp(KeyCode.Mouse0))
-        {
-            
-        }
-    }
-
-    void PlayChargeShot()
-    {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            source.PlayOneShot(bubbleChargeSound);
-        }
-
-        if (Input.GetKeyUp(KeyCode.Mouse0))
-        {
-            source.Stop();
-            source.PlayOneShot(shootBubbleSound);
-        }
-    }
-
-    public void PlayBubbleJumpSound()
-    {
-        source.PlayOneShot(bubbleJumpSound);
-    }
 
 
 }
