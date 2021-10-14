@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc3bb7a7b59a60842b6994eecbd8af67, type: 3}
   m_Name: Wave9
   m_EditorClassIdentifier: 
-  timeToCompleteWave: 0
-  enemiesPerWave: 0
-  enemiesOnScreen: 0
-  enemySpawnInterval: 0
-  enemyPrefabList: []
+  timeToCompleteWave: 40
+  enemiesPerWave: 8
+  enemiesOnScreen: 5
+  enemySpawnInterval: 2
+  enemyPrefabList:
+  - prefab: {fileID: 172022398957693110, guid: 70677da9dddaff9499e2b5693f8e838b, type: 3}
+    weight: 100
   spawnPointFolder: {fileID: 0}
