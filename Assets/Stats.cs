@@ -11,6 +11,7 @@ public class Stats : MonoBehaviour
     public int health;
 
     [SerializeField] bool isPlayer;
+
     [Tooltip("How long this character will be immune after taking damage")]
     [SerializeField] float damageInvuln;
     float damageInvulnLeft;
@@ -33,22 +34,14 @@ public class Stats : MonoBehaviour
 
     public bool isTrapped;
 
+    public bool isBubble;
+
     [SerializeField] GameObject deathParticle;
     [SerializeField] GameObject damageParticle;
     PlayerMovement movement;
-   
-    
+    SoundManager sound;
 
-
-
-    /*
-    public enum Team
-    {
-        player,
-        enemy
-    }
-    public Team team = Team.player; //What team said thing is on
-    */
+ 
 
     public void Update()
     {
@@ -67,7 +60,7 @@ public class Stats : MonoBehaviour
         {
             movement = GetComponent<PlayerMovement>();
         }
-        
+        sound = GameObject.Find("SoundManager").GetComponent<SoundManager>();
     }
 
     public void setInval(float time)
@@ -83,8 +76,11 @@ public class Stats : MonoBehaviour
             if (damageParticle != null) { Instantiate(damageParticle, transform.position, Quaternion.identity); }
             damageInvulnLeft = damageInvuln;
             health -= _DMGAmount;
+            sound.sources.damage.PlayOneShot(sound.sources.damage.clip);
             if (health <= 0)
             {
+                //sound.sources.bubbleCharge.PlayOneShot(sound.sources.bubbleCharge.clip);
+                sound.PlaySound(sound.sources.pop);
                 Die();
             }
         }
@@ -98,23 +94,13 @@ public class Stats : MonoBehaviour
         Instantiate(deathParticle, transform.position, Quaternion.identity); //This causes an error since instantiating things when the scene unloads is kind of weird..
         if (isPlayer)
         {
-           
+            //UnityEngine.SceneManagement.SceneManager.LoadScene("endScene");
             GameObject gam = GameObject.Find("EnemySpawnerManager");
             WaveManager wav = gam.GetComponent<WaveManager>();
-
-            //UnityEngine.SceneManagement.SceneManager.LoadScene("endScene");
-            GameObject.Find("HighScoreManager").GetComponent<HighScoreManager>().HighScoreThisRound(wav.waveIndex);
             wav.EndGame();
         }
-
-
-        
-            Destroy(gameObject);
-        
-       
+        Destroy(gameObject);
         
     }
-
-   
 
 }
