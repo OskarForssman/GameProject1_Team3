@@ -98,7 +98,10 @@ public class Stats : MonoBehaviour
             //UnityEngine.SceneManagement.SceneManager.LoadScene("endScene");
             GameObject gam = GameObject.Find("EnemySpawnerManager");
             WaveManager wav = gam.GetComponent<WaveManager>();
-            
+            if (GameObject.Find("HighScoreManager"))
+            {
+                GameObject.Find("HighScoreManager").GetComponent<HighScoreManager>().HighScoreThisRound();
+            }
             wav.EndGame();
         }
         Destroy(gameObject);
