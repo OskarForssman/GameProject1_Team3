@@ -158,6 +158,18 @@ MonoBehaviour:
   playerLayerMask:
     serializedVersion: 2
     m_Bits: 256
+--- !u!114 &5761503115651807792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8734954354809780686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf65f76879a8d5f4d9220c9aff7c295e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7737532950121011801
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -172,6 +184,10 @@ PrefabInstance:
     - target: {fileID: 1322360153364226967, guid: 3477f38801859dd4d961f4123b9c15ef, type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322360153364226967, guid: 3477f38801859dd4d961f4123b9c15ef, type: 3}
+      propertyPath: m_TagString
+      value: Tadpool
       objectReference: {fileID: 0}
     - target: {fileID: 1322360153364226968, guid: 3477f38801859dd4d961f4123b9c15ef, type: 3}
       propertyPath: player

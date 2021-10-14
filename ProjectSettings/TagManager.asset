@@ -13,6 +13,10 @@ TagManager:
   - Stone
   - Cannon
   - Invincible
+  - Snail
+  - Spikepool
+  - Tadpool
+  - Frog
   layers:
   - Default
   - TransparentFX
