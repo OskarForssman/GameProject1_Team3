@@ -1127,6 +1127,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -168.66998
       objectReference: {fileID: 0}
+    - target: {fileID: 554855844565164222, guid: fafa3afbde713be47b573b1932ec2986, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2258877446411227951, guid: fafa3afbde713be47b573b1932ec2986, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3731445362426774170, guid: fafa3afbde713be47b573b1932ec2986, type: 3}
+      propertyPath: m_Name
+      value: PowerUpDisplay
+      objectReference: {fileID: 0}
     - target: {fileID: 4842487126988024502, guid: fafa3afbde713be47b573b1932ec2986, type: 3}
       propertyPath: m_Camera
       value: 
@@ -1218,6 +1230,14 @@ PrefabInstance:
     - target: {fileID: 4842487126988024507, guid: fafa3afbde713be47b573b1932ec2986, type: 3}
       propertyPath: m_Name
       value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 7554822565932276548, guid: fafa3afbde713be47b573b1932ec2986, type: 3}
+      propertyPath: m_Name
+      value: HealthUpPWRUpDisplay
+      objectReference: {fileID: 0}
+    - target: {fileID: 8091001460275995455, guid: fafa3afbde713be47b573b1932ec2986, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fafa3afbde713be47b573b1932ec2986, type: 3}
@@ -1331,6 +1351,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &493546027 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3194521131168618193, guid: fafa3afbde713be47b573b1932ec2986, type: 3}
+  m_PrefabInstance: {fileID: 395460570}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07c2a9aa6962e3948a74d119bfbb52bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &497181410
 GameObject:
   m_ObjectHideFlags: 0
@@ -2085,6 +2116,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: badd64e92abb0f941a894cbbf8e482df, type: 3}
+--- !u!114 &721181218 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5863665529291014217, guid: fafa3afbde713be47b573b1932ec2986, type: 3}
+  m_PrefabInstance: {fileID: 395460570}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07c2a9aa6962e3948a74d119bfbb52bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &752331290
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2610,6 +2652,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e66f8b796ebd4564f97de81c87e41b8c, type: 3}
+--- !u!114 &938356924 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 724774353615130210, guid: fafa3afbde713be47b573b1932ec2986, type: 3}
+  m_PrefabInstance: {fileID: 395460570}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07c2a9aa6962e3948a74d119bfbb52bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &938641185
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3134,9 +3187,21 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 509486544, guid: 97f89031f8f155e418a7fb128555afc5, type: 3}
+      propertyPath: invinDisplay
+      value: 
+      objectReference: {fileID: 493546027}
+    - target: {fileID: 509486544, guid: 97f89031f8f155e418a7fb128555afc5, type: 3}
+      propertyPath: healthUpDisplay
+      value: 
+      objectReference: {fileID: 938356924}
+    - target: {fileID: 509486544, guid: 97f89031f8f155e418a7fb128555afc5, type: 3}
       propertyPath: timetoaddforWave
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 509486544, guid: 97f89031f8f155e418a7fb128555afc5, type: 3}
+      propertyPath: bubblechargeDisplay
+      value: 
+      objectReference: {fileID: 721181218}
     - target: {fileID: 671850495134613552, guid: 97f89031f8f155e418a7fb128555afc5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

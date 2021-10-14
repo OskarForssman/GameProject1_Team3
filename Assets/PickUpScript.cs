@@ -15,7 +15,13 @@ public class PickUpScript : MonoBehaviour
     WaveManager manager;
     public float timetoaddforWave;
     Stats stats;
-   
+
+    [Header("Ui Reference:")]
+    [SerializeField] TempShowUp invinDisplay;
+    [SerializeField] TempShowUp bubblechargeDisplay;
+    [SerializeField] TempShowUp healthUpDisplay;
+
+
     private void Awake()
     {
         reflect = GetComponent<ShotBubbleThatReflect>();
@@ -37,14 +43,17 @@ public class PickUpScript : MonoBehaviour
             switch (hit.transform.tag)
             {
                 case "Cannon":
+                bubblechargeDisplay.StartCoroutine(bubblechargeDisplay.EnableTextForTime(10f));
                 reflect.cannonPWRUpDuration = 10;
                 Destroy(hit.gameObject);
                 break;
                 case "Invincible":
                     stats.setInval(inviciblesec);
+                invinDisplay.StartCoroutine(invinDisplay.EnableTextForTime(inviciblesec));
                 Destroy(hit.gameObject);
                 break;
                 case "HP":
+                healthUpDisplay.StartCoroutine(healthUpDisplay.EnableTextForTime(3f));
                      stats.health=stats.health+1;
                 Destroy(hit.gameObject);
                 break;
