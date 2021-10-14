@@ -18,5 +18,5 @@ MonoBehaviour:
   enemySpawnInterval: 1
   enemyPrefabList:
   - prefab: {fileID: 8734954354809780686, guid: 1fe509fd7a3a1d34a80692bf86021586, type: 3}
-    weight: 0
+    weight: 100
   spawnPointFolder: {fileID: 0}
