@@ -69,6 +69,7 @@ public class ShotBubbleThatReflect : MonoBehaviour
         {
             bubbleChargeTime = 0;
         }
+        /*
         if (bubbleChargeTime > 0.1)
         {
             sound.PlaySound(sound.sources.bubbleCharge);
@@ -77,6 +78,7 @@ public class ShotBubbleThatReflect : MonoBehaviour
         {
             sound.sources.bubbleCharge.Stop();
         }
+        */
         
     }
     private void spawnBigJumpableBubble(int x)

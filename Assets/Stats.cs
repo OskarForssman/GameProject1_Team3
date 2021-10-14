@@ -77,6 +77,7 @@ public class Stats : MonoBehaviour
             damageInvulnLeft = damageInvuln;
             health -= _DMGAmount;
             sound.sources.damage.PlayOneShot(sound.sources.damage.clip);
+            sound.sources.damage.pitch = UnityEngine.Random.Range(0.7f, 0.9f);
             if (health <= 0)
             {
                 //sound.sources.bubbleCharge.PlayOneShot(sound.sources.bubbleCharge.clip);

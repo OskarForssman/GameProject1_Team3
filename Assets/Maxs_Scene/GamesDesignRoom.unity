@@ -6366,9 +6366,21 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0.027
       objectReference: {fileID: 0}
+    - target: {fileID: 5332152132831048269, guid: 7eb1cbdcb9f8d4b4eaea310ba4693b2a, type: 3}
+      propertyPath: m_Volume
+      value: 0.258
+      objectReference: {fileID: 0}
     - target: {fileID: 5332152132831048271, guid: 7eb1cbdcb9f8d4b4eaea310ba4693b2a, type: 3}
       propertyPath: Loop
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5332152132831048276, guid: 7eb1cbdcb9f8d4b4eaea310ba4693b2a, type: 3}
+      propertyPath: m_Pitch
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5332152132831048276, guid: 7eb1cbdcb9f8d4b4eaea310ba4693b2a, type: 3}
+      propertyPath: m_Volume
+      value: 0.501
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7eb1cbdcb9f8d4b4eaea310ba4693b2a, type: 3}

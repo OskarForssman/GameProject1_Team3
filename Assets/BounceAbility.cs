@@ -45,7 +45,7 @@ public class BounceAbility : MonoBehaviour
                     {
                         stats.TakeDamage(1);
                     }
-                    if (s.isBubble)
+                    if (!s.isBubble)
                     {
                         sound.sources.bubbleJump.PlayOneShot(sound.sources.bubbleJump.clip);
                     }
