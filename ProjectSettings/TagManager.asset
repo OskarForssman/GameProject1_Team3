@@ -17,6 +17,7 @@ TagManager:
   - Spikepool
   - Tadpool
   - Frog
+  - Powerup
   layers:
   - Default
   - TransparentFX

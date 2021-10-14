@@ -6,7 +6,7 @@ public class PopUpManager : MonoBehaviour
 {
       public float timerbfrspawn;
     SpawnPickup pickUp;
-    bool trigger;
+   
     // Start is called before the first frame update
     float timer;
 
@@ -14,59 +14,44 @@ public class PopUpManager : MonoBehaviour
     {
       
         pickUp = GetComponent<SpawnPickup>();
-        spawnthepopus();
-       
+        timer = timerbfrspawn;
+
+    }
+    private void Update()
+    {
+
+
+        if (getAmountOfpowerupsonMap() == 0)
+        {
+            timer -= Time.deltaTime;
+        if (timer <= 0.0f)
+        {
+         
+               
+            spawnthepopus();
+
+
+
+
+        }
+        }
     }
 
     // Update is called once per frame
-    void Update()
+
+    public void spawnthepopus()
     {
 
-        timer -= Time.deltaTime;
-        if (timer <= 0.0f)
-        {
-            if (!trigger)
-            {
-                destroyThePopups();
-            }
-            else
-            {
-                spawnthepopus();
-               
-            }
-               
-            
-         
-                   
-
-        }
-
-      
-   
-
-    }
-    void spawnthepopus()
-    {
-        
         pickUp.SpawnPopup();
-        trigger = false;
         timer = timerbfrspawn;
     }
-
-    void destroyThePopups()
+   int getAmountOfpowerupsonMap()
     {
-        pickUp.DestroyPopup();
-        trigger = true;
-        timer = timerbfrspawn;
-
+        int f = GameObject.FindGameObjectsWithTag("Stone").Length + GameObject.FindGameObjectsWithTag("HP").Length + GameObject.FindGameObjectsWithTag("Random").Length + GameObject.FindGameObjectsWithTag("Cannon").Length + GameObject.FindGameObjectsWithTag("Invincible").Length;
+        return f;
     }
 
-    private IEnumerator Countdown3()
-    {
-        
-            yield return new WaitForSeconds(3); 
 
 
-       
-    }
+
 }
