@@ -49,6 +49,7 @@ public class HighScoreManager : MonoBehaviour
         HighScore *= wav.waveIndex;
         HighScore=HighScore * 100;
         Debug.Log("HighScore "+HighScore);
+        GameObject.Find("HighScoreSetter").GetComponent<SetHighScore>().SetCurrentHighScore(HighScore);
         AmountOFtadKilled = 0;
         amountofFrogkilled = 0;
         amountofspikekillec = 0;
