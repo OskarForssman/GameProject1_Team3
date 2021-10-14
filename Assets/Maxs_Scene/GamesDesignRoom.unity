@@ -1343,7 +1343,6 @@ GameObject:
   - component: {fileID: 473991979}
   - component: {fileID: 473991978}
   - component: {fileID: 473991977}
-  - component: {fileID: 473991976}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -1351,26 +1350,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &473991976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 473991975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 257aeefb1f0b91443b8bd7a4f9cfaadb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  source: {fileID: 0}
-  shootBubbleSound: {fileID: 0}
-  shootBigBubbleSound: {fileID: 0}
-  bubblePopSound: {fileID: 0}
-  jumpSound: {fileID: 0}
-  bubbleJumpSound: {fileID: 0}
-  bubbleChargeSound: {fileID: 0}
-  stepOnEnemy: {fileID: 0}
 --- !u!82 &473991977
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2578,8 +2557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 107f0c132efd16b45be9e3d8c15b7012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timebefredestroyPopup: 20
-  timerbfrspawn: 3
+  timerbfrspawn: 10
 --- !u!1 &835407521
 GameObject:
   m_ObjectHideFlags: 0
@@ -2695,6 +2673,53 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 835407521}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &843970669
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 843970670}
+  - component: {fileID: 843970671}
+  m_Layer: 0
+  m_Name: HighScoreManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &843970670
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843970669}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &843970671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843970669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ff29a035200def45b73f3cbb61aa1f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PointsFrog: 0
+  PointsTad: 0
+  PointsSpike: 0
+  PointsSnail: 0
 --- !u!1001 &873071389
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2821,27 +2846,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e66f8b796ebd4564f97de81c87e41b8c, type: 3}
---- !u!1 &904806880 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 671850495204827739, guid: 97f89031f8f155e418a7fb128555afc5, type: 3}
-  m_PrefabInstance: {fileID: 1126006232}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &904806881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 904806880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 127b57a733283d040a6cde5152009b54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FrogPoint: 30
-  Snailpoint: 40
-  Spikepoint: 20
-  Tadpoint: 10
 --- !u!1001 &939555341
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3400,7 +3404,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -1278825175307073768, guid: 97f89031f8f155e418a7fb128555afc5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 97f89031f8f155e418a7fb128555afc5, type: 3}
 --- !u!114 &1141869783 stripped
 MonoBehaviour:
