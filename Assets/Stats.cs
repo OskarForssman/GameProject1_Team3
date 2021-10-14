@@ -36,6 +36,7 @@ public class Stats : MonoBehaviour
     [SerializeField] GameObject deathParticle;
     [SerializeField] GameObject damageParticle;
     PlayerMovement movement;
+    HighScore highScore;
    
 
     /*
@@ -64,7 +65,7 @@ public class Stats : MonoBehaviour
         {
             movement = GetComponent<PlayerMovement>();
         }
-      
+        highScore = GetComponent<HighScore>();  
     }
 
     public void setInval(float time)
@@ -95,20 +96,21 @@ public class Stats : MonoBehaviour
         Instantiate(deathParticle, transform.position, Quaternion.identity); //This causes an error since instantiating things when the scene unloads is kind of weird..
         if (isPlayer)
         {
-            //UnityEngine.SceneManagement.SceneManager.LoadScene("endScene");
             GameObject gam = GameObject.Find("EnemySpawnerManager");
             WaveManager wav = gam.GetComponent<WaveManager>();
-            Debug.Log(GameObject.Find("HighScoreSetter").GetComponent<CalculateHighScore>().setTotalHighScore(wav.waveIndex));
+            
+            //UnityEngine.SceneManagement.SceneManager.LoadScene("endScene");
+           
             wav.EndGame();
         }
-        else
-        {
-           
-            GameObject.Find("HighScoreSetter").GetComponent<CalculateHighScore>().setHighScorePointsThisRound(gameObject.name);
+       // highScore.setHighScorePointsThisRound(gameObject.name);   
             Destroy(gameObject);
-        }
+        
        
         
     }
+   
+
+
 
 }
