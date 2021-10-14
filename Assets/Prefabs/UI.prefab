@@ -273,6 +273,7 @@ GameObject:
   - component: {fileID: 5079372593689127061}
   - component: {fileID: 3174260400652620790}
   - component: {fileID: 2258877446411227951}
+  - component: {fileID: 3194521131168618193}
   m_Layer: 10
   m_Name: InvinPWRUpDisplay
   m_TagString: Untagged
@@ -341,6 +342,18 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Invincible!
+--- !u!114 &3194521131168618193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3798819346184985249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07c2a9aa6962e3948a74d119bfbb52bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4842487126845879027
 GameObject:
   m_ObjectHideFlags: 0
@@ -1161,6 +1174,7 @@ GameObject:
   - component: {fileID: 7033289883601747382}
   - component: {fileID: 8728307910172278339}
   - component: {fileID: 554855844565164222}
+  - component: {fileID: 5863665529291014217}
   m_Layer: 10
   m_Name: BubbleChargerPWRUpDisplay (1)
   m_TagString: Untagged
@@ -1229,6 +1243,18 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Bubble Charger!
+--- !u!114 &5863665529291014217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6976198524166524063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07c2a9aa6962e3948a74d119bfbb52bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7554822565932276548
 GameObject:
   m_ObjectHideFlags: 0
@@ -1240,6 +1266,7 @@ GameObject:
   - component: {fileID: 2747009192058316851}
   - component: {fileID: 7482341689793223706}
   - component: {fileID: 8091001460275995455}
+  - component: {fileID: 724774353615130210}
   m_Layer: 10
   m_Name: InvinPWRUpHealth
   m_TagString: Untagged
@@ -1308,3 +1335,15 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Health Up!
+--- !u!114 &724774353615130210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7554822565932276548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07c2a9aa6962e3948a74d119bfbb52bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
