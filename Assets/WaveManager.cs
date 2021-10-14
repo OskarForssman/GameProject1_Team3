@@ -80,6 +80,8 @@ public class WaveManager : MonoBehaviour
     private void NextWave()
     {
         waveIndex++;
+        WaveDisplay disp = waveDisplayObject.GetComponentInChildren<WaveDisplay>(); //ugly!!!11
+        disp.waveCount++;
         waveIndex = Mathf.Clamp(waveIndex, 0, waveList.Length-1);
         SetWave(waveIndex);
     }

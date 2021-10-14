@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class WaveDisplay : MonoBehaviour
 {
     string text;
+    public int waveCount;
     Text textComp;
     [SerializeField] WaveManager waveManager;
 
@@ -15,7 +16,7 @@ public class WaveDisplay : MonoBehaviour
     }
     public void Update()
     {
-        int acText = waveManager.waveIndex + 1;
+        int acText = waveCount + 1;
         string stText = acText.ToString();
         textComp.text = stText;
 
