@@ -17,20 +17,29 @@ public class MainPageManager : MonoBehaviour
         
     }
 
-    public void jumpToPlayScene()
+    public void JumpToPlayScene()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("GamesDesignRoom");
     }
 
-    public void jumpToControlScene()
+    public void JumpToControlScene()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("ControlScene");
     }
 
-    public void jumpToHighScoreScene()
+    public void JumpToHighScoreScene()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("HighScoreScene");
     }
 
+    public void JumpToCreditsScene()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("CreditsScene");
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 
 }
