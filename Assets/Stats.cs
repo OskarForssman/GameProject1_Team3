@@ -11,7 +11,6 @@ public class Stats : MonoBehaviour
     public int health;
 
     [SerializeField] bool isPlayer;
-
     [Tooltip("How long this character will be immune after taking damage")]
     [SerializeField] float damageInvuln;
     float damageInvulnLeft;
@@ -37,6 +36,7 @@ public class Stats : MonoBehaviour
     [SerializeField] GameObject deathParticle;
     [SerializeField] GameObject damageParticle;
     PlayerMovement movement;
+   
 
     /*
     public enum Team
@@ -64,6 +64,7 @@ public class Stats : MonoBehaviour
         {
             movement = GetComponent<PlayerMovement>();
         }
+      
     }
 
     public void setInval(float time)
@@ -97,9 +98,16 @@ public class Stats : MonoBehaviour
             //UnityEngine.SceneManagement.SceneManager.LoadScene("endScene");
             GameObject gam = GameObject.Find("EnemySpawnerManager");
             WaveManager wav = gam.GetComponent<WaveManager>();
+            Debug.Log(GameObject.Find("HighScoreSetter").GetComponent<CalculateHighScore>().setTotalHighScore(wav.waveIndex));
             wav.EndGame();
         }
-        Destroy(gameObject);
+        else
+        {
+           
+            GameObject.Find("HighScoreSetter").GetComponent<CalculateHighScore>().setHighScorePointsThisRound(gameObject.name);
+            Destroy(gameObject);
+        }
+       
         
     }
 
