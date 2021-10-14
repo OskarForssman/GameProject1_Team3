@@ -2369,7 +2369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 107f0c132efd16b45be9e3d8c15b7012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerbfrspawn: 3
+  timerbfrspawn: 10
 --- !u!1 &835407521
 GameObject:
   m_ObjectHideFlags: 0
@@ -2611,23 +2611,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e66f8b796ebd4564f97de81c87e41b8c, type: 3}
---- !u!1 &904806880 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 671850495204827739, guid: 97f89031f8f155e418a7fb128555afc5, type: 3}
-  m_PrefabInstance: {fileID: 1126006232}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &904806881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 904806880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 127b57a733283d040a6cde5152009b54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &939555341
 PrefabInstance:
   m_ObjectHideFlags: 0

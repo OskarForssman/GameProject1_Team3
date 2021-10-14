@@ -37,7 +37,7 @@ public class HighScoreManager : MonoBehaviour
                 amountofspikekillec++;
                 break;
         }
-        Debug.Log(AmountOFtadKilled);
+       
         
     }
 
@@ -47,6 +47,7 @@ public class HighScoreManager : MonoBehaviour
         WaveManager wav = gam.GetComponent<WaveManager>();
         HighScore = (AmountOFtadKilled*PointsTad) + (amountofspikekillec*PointsSpike) + (amountofsnailkilled*PointsSnail) + (amountofFrogkilled*PointsFrog);
         HighScore *= wav.waveIndex;
+        HighScore=HighScore * 100;
         Debug.Log("HighScore "+HighScore);
         AmountOFtadKilled = 0;
         amountofFrogkilled = 0;
