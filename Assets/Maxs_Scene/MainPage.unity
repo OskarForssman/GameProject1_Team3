@@ -207,7 +207,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1262278741}
         m_TargetAssemblyTypeName: MainPageManager, Assembly-CSharp
-        m_MethodName: JumpToControlScene
+        m_MethodName: JumpToPlayScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
