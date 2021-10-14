@@ -45,7 +45,9 @@ public class HighScoreManager : MonoBehaviour
         HighScore = (amountofFrogkilled*PointsFrog)+(amountofsnailkilled*PointsSnail)+(AmountOFtadKilled*PointsTad)+(amountofspikekilled*PointsSpike);
         HighScore = (HighScore * 100)*waveindex;
         PlayerPrefs.SetInt("CurrentHighScore", HighScore);
-       
+        PlayerPrefs.SetInt("CurrentWave", waveindex);
+        Debug.Log("Highscore "+HighScore);
+        Debug.Log("Wave: "+waveindex);
         AmountOFtadKilled = 0;
         amountofFrogkilled = 0;
         amountofspikekilled = 0;
