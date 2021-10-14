@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Maxs_Scene/GamesDesignRoom.unity
     guid: 3a8e49610fea51248afe4702a6572feb
+  - enabled: 1
+    path: Assets/Maxs_Scene/MainPage.unity
+    guid: d41a3d9d4513339419664cc546ba69fb
+  - enabled: 1
+    path: Assets/Maxs_Scene/HighScoreScene.unity
+    guid: 13ceeac9641b2f74f8165e8d6713a559
+  - enabled: 1
+    path: Assets/Maxs_Scene/ControlScene.unity
+    guid: 2f1088325d229e4448694effac8fb12a
   m_configObjects: {}

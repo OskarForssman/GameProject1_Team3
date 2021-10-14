@@ -16,10 +16,17 @@ public class InputManager : UnitInputs
     {
         inputVector.x = Input.GetAxisRaw("Horizontal");
         inputVector.y = Input.GetAxisRaw("Vertical");
+        /*
         if (inputVector != Vector2.zero)
         {
             fireInputVector = inputVector;
         }
+        */
+        Vector2 i = Input.mousePosition;
+        fireInputVector = Camera.main.ScreenToWorldPoint(i) - transform.position;
+        
+        fireInputVector.Normalize();
+        
 
         jumpInput = Input.GetKeyDown(KeyCode.Space);
         spawnBubblebehind = Input.GetKeyDown(KeyCode.E);
@@ -31,4 +38,5 @@ public class InputManager : UnitInputs
 
 
     }
+
 }

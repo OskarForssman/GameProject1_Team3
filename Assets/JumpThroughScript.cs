@@ -9,9 +9,13 @@ public class JumpThroughScript : MonoBehaviour
    
     private void Update()
     {
-       float f= GameObject.Find("PlayerFish").GetComponent<PlayerMovement>().velocity.y;
-       CheckIFColliderActive(f);
-     
+        if (GameObject.Find("PlayerFish"))
+        {
+            float player = GameObject.Find("PlayerFish").GetComponent<PlayerMovement>().velocity.y;
+            CheckIFColliderActive(player);
+        }
+      
+
     }
 
 
@@ -21,12 +25,14 @@ public class JumpThroughScript : MonoBehaviour
         
         if (jump>0)
         {
-            gameObject.layer = 13;
+            //gameObject.layer = 13;
+            collider.enabled = false;
         }
         //else the collision will not be ignored
         else
         {
-            gameObject.layer = 6;
+            //gameObject.layer = 6;
+            collider.enabled = true;
         }
     }
 }

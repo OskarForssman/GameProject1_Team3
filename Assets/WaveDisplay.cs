@@ -15,8 +15,9 @@ public class WaveDisplay : MonoBehaviour
     }
     public void Update()
     {
-        text = waveManager.waveIndex.ToString();
-        textComp.text = text;
+        int acText = waveManager.waveIndex + 1;
+        string stText = acText.ToString();
+        textComp.text = stText;
 
     }
 }

@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2122664159939178495}
   - component: {fileID: 2122664159939178492}
-  - component: {fileID: 2122664159939178494}
   - component: {fileID: -1200421815789107020}
   m_Layer: 12
   m_Name: Stone
@@ -73,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a5e4e2212808cbf44bcb82b0b50b39fe, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86ce58f3dabb3c2458c7ca686ef3d7ba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -84,22 +83,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2122664159939178494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2122664159939178493}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 811861e4018ec694395fed2eae9a9c46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyLayerMask:
-    serializedVersion: 2
-    m_Bits: 256
-  colliderRadius: 0.8
 --- !u!65 &-1200421815789107020
 BoxCollider:
   m_ObjectHideFlags: 0

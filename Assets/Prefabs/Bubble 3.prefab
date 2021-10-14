@@ -165,12 +165,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e5c94033a68f8d4fac561db5d578a89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bubblepopinthisamountofsec: 7.5
+  bubblepopinthisamountofsec: 9
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 512
-  colliderRadius: 0.85
+  colliderRadius: 0.73
   willTrap: 1
+  bubblePop: {fileID: 1511839536400694499, guid: 2a0410e4b8ae07c4ea1443f8a679f408, type: 3}
   trapper: {fileID: 0}
 --- !u!114 &1858292173557253018
 MonoBehaviour:
@@ -224,7 +225,7 @@ Transform:
   m_GameObject: {fileID: 8971811331821741602}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.8161888, y: 3.8161888, z: 3.8161888}
+  m_LocalScale: {x: 0.7905617, y: 0.7905617, z: 0.7905617}
   m_Children: []
   m_Father: {fileID: 7701884690343755775}
   m_RootOrder: 0
@@ -248,7 +249,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 34d520c0879765948a33fbef053c061d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -269,7 +270,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: b2f9ded68e074ef44ad7c092e6512ba3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 701768dbd9fc22b4381262d2b6517326, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -11,7 +11,6 @@ public class Stats : MonoBehaviour
     public int health;
 
     [SerializeField] bool isPlayer;
-
     [Tooltip("How long this character will be immune after taking damage")]
     [SerializeField] float damageInvuln;
     float damageInvulnLeft;
@@ -37,6 +36,8 @@ public class Stats : MonoBehaviour
     [SerializeField] GameObject deathParticle;
     [SerializeField] GameObject damageParticle;
     PlayerMovement movement;
+    HighScore highScore;
+   
 
     /*
     public enum Team
@@ -64,6 +65,7 @@ public class Stats : MonoBehaviour
         {
             movement = GetComponent<PlayerMovement>();
         }
+        highScore = GetComponent<HighScore>();  
     }
 
     public void setInval(float time)
@@ -94,13 +96,21 @@ public class Stats : MonoBehaviour
         Instantiate(deathParticle, transform.position, Quaternion.identity); //This causes an error since instantiating things when the scene unloads is kind of weird..
         if (isPlayer)
         {
-            //UnityEngine.SceneManagement.SceneManager.LoadScene("endScene");
             GameObject gam = GameObject.Find("EnemySpawnerManager");
             WaveManager wav = gam.GetComponent<WaveManager>();
+            
+            //UnityEngine.SceneManagement.SceneManager.LoadScene("endScene");
+           
             wav.EndGame();
         }
-        Destroy(gameObject);
+       // highScore.setHighScorePointsThisRound(gameObject.name);   
+            Destroy(gameObject);
+        
+       
         
     }
+   
+
+
 
 }

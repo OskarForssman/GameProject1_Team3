@@ -15,6 +15,7 @@ public class WaveManager : MonoBehaviour
     public int enemiesOnScreen;
     public float timeLeftOfWave; //How long until you lose the wave
     public int waveIndex = 0; //What wave is it right now
+    [SerializeField] float timeCap = 40;
 
     #endregion
 
@@ -70,6 +71,7 @@ public class WaveManager : MonoBehaviour
     {
         currentWave = waveList[_waveIndex];
         timeLeftOfWave += currentWave.timeToCompleteWave;
+        timeLeftOfWave = Mathf.Min(timeLeftOfWave, timeCap);
         enemiesLeft = currentWave.enemiesPerWave;
         spawnIntervalRoutine = StartCoroutine(SpawnIntervalCoroutine(currentWave.enemySpawnInterval));
         displayWaveRoutine = StartCoroutine(DisplayNewWave(4.5f));

@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8814193423649332465}
   - component: {fileID: 8814193423649332464}
-  - component: {fileID: -860708043744657277}
   - component: {fileID: -1476965696490181219}
   m_Layer: 12
   m_Name: life+1
@@ -73,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 635ccb1062a1c0749bbb0a4dc6dc7aef, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6104a53c10515664b8fbddd0ea584416, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -84,22 +83,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-860708043744657277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8814193423649332471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 811861e4018ec694395fed2eae9a9c46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyLayerMask:
-    serializedVersion: 2
-    m_Bits: 256
-  colliderRadius: 0.8
 --- !u!65 &-1476965696490181219
 BoxCollider:
   m_ObjectHideFlags: 0
