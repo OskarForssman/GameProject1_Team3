@@ -5,32 +5,21 @@ using UnityEngine;
 public class SetHighScore : MonoBehaviour
 {
     // Start is called before the first frame update
-    int currentHighScore;
    
+  
+    int highscoreNow=0;
     void Start()
     {
-      int currentHighScore=  Getint("HighScore");
-        
-    }
-
-   public void SetCurrentHighScore(int HighScore)
-    {
-        if(HighScore> currentHighScore)
+      
+      int incomingHighscore=  PlayerPrefs.GetInt("CurrentHighScore");
+        highscoreNow = PlayerPrefs.GetInt("HighScore");
+        if (incomingHighscore > highscoreNow)
         {
-            currentHighScore = HighScore;
-            SetInt("HighScore",currentHighScore);
-            //Set highscorescenen
+            PlayerPrefs.SetInt("HighScore", incomingHighscore);
         }
+
+        Debug.Log(PlayerPrefs.GetInt("HighScore"));
     }
 
-    public void SetInt(string KeyName, int Value)
-    {
-        PlayerPrefs.SetInt(KeyName, Value);
-        //Set highscorescenen
-    }
-
-    public int Getint(string KeyName)
-    {
-        return PlayerPrefs.GetInt(KeyName);
-    }
+   
 }

@@ -100,7 +100,7 @@ public class Stats : MonoBehaviour
             WaveManager wav = gam.GetComponent<WaveManager>();
             if (GameObject.Find("HighScoreManager"))
             {
-                GameObject.Find("HighScoreManager").GetComponent<HighScoreManager>().HighScoreThisRound();
+                GameObject.Find("HighScoreManager").GetComponent<HighScoreManager>().HighScoreThisRound(wav.waveIndex);
             }
             wav.EndGame();
         }
