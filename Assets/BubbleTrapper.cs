@@ -6,6 +6,12 @@ public class BubbleTrapper : MonoBehaviour
 {
     public Transform trappedTransform;
     private Stats trappedStats;
+    SoundManager sound;
+
+    public void Awake()
+    {
+        sound = GameObject.Find("SoundManager").GetComponent<SoundManager>();
+    }
 
     public void Update()
     {
@@ -19,6 +25,7 @@ public class BubbleTrapper : MonoBehaviour
     {
         Debug.Log("doublepop");
         trappedStats.TakeDamage(6);
+        sound.PlaySound(sound.sources.bubbleJump);
     }
 
     public void SetTrapped(Transform _transform)

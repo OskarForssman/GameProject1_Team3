@@ -8,6 +8,7 @@ public class ShotBubbleThatReflect : MonoBehaviour
     Animator anim;
     InputManager input;
     SoundManager sound;
+    [SerializeField] GameObject particle;
     private float nextFire = 0.0F;
     [SerializeField]  public float fireRateInsecbig = 2F;
     [SerializeField] public float fireRateInsecSmall = 0.2F;
@@ -64,10 +65,20 @@ public class ShotBubbleThatReflect : MonoBehaviour
             }
             bubbleChargeTime += Time.deltaTime;
             bubbleChargeTime = Mathf.Clamp(bubbleChargeTime, 0, bubbleChargeTimeNeeded);
+            
         }
         else
         {
             bubbleChargeTime = 0;
+        }
+
+        if (bubbleChargeTime >= bubbleChargeTimeNeeded)
+        {
+            particle.SetActive(true);
+        }
+        else
+        {
+            particle.SetActive(false);
         }
         /*
         if (bubbleChargeTime > 0.1)
@@ -79,7 +90,7 @@ public class ShotBubbleThatReflect : MonoBehaviour
             sound.sources.bubbleCharge.Stop();
         }
         */
-        
+
     }
     private void spawnBigJumpableBubble(int x)
     {
