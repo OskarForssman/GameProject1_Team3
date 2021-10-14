@@ -166,6 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca6c70e9b396ab40a05a2acc351d9d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 1951558616}
 --- !u!1 &1018565551
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,7 +587,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 9000000
+  m_Text: 
 --- !u!222 &1951558617
 CanvasRenderer:
   m_ObjectHideFlags: 0

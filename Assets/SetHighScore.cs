@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class SetHighScore : MonoBehaviour
 {
     // Start is called before the first frame update
-   
-  
+
+    public Text text;
     int highscoreNow=0;
     void Start()
     {
@@ -18,7 +18,7 @@ public class SetHighScore : MonoBehaviour
             PlayerPrefs.SetInt("HighScore", incomingHighscore);
         }
 
-        Debug.Log(PlayerPrefs.GetInt("HighScore"));
+       text.text=PlayerPrefs.GetInt("HighScore").ToString();
     }
 
    
