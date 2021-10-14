@@ -8,10 +8,10 @@ public class AddText : MonoBehaviour
     public Text textPoints;
     void Start()
     {
-        textLevel.text= PlayerPrefs.GetInt("CurrentWave").ToString();
-        textPoints.text = PlayerPrefs.GetInt("CurrentHighScore").ToString();
+        textLevel.text= PlayerPrefs.GetInt("CurrentHighScore").ToString();
+        textPoints.text = PlayerPrefs.GetInt("CurrentWave").ToString();
 
-        
+
     }
  
 

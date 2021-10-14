@@ -31,6 +31,6 @@ public class LightManager : MonoBehaviour
 
     public void RandomizeLight()
     {
-        bloom.tint.value = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
+        bloom.tint.value = Random.ColorHSV(0f, 1f, 0.7f, 0.7f, 0.5f, 0.7f);
     }
 }
