@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private LayerMask groundLayerMask;
 
+    [SerializeField] bool isPlayer;
+
     #endregion
 
 
@@ -116,7 +118,11 @@ public class PlayerMovement : MonoBehaviour
         if (_jumpInput)
         {
             velocity.y = jumpSpeed;
-            sound.sources.jump.PlayOneShot(sound.sources.jump.clip);
+            if (isPlayer)
+            {
+                sound.sources.jump.PlayOneShot(sound.sources.jump.clip);
+            }
+            
             
 
         }
