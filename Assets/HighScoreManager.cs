@@ -7,7 +7,7 @@ public class HighScoreManager : MonoBehaviour
 
     int AmountOFtadKilled;
     int amountofFrogkilled;
-    int amountofspikekillec;
+    int amountofspikekilled;
     int amountofsnailkilled;
 
     public int PointsFrog, PointsTad, PointsSpike, PointsSnail;
@@ -16,7 +16,7 @@ public class HighScoreManager : MonoBehaviour
     {
         AmountOFtadKilled = 0;
         amountofFrogkilled = 0;
-        amountofspikekillec = 0;
+        amountofspikekilled = 0;
         amountofsnailkilled = 0;
 
     }
@@ -34,27 +34,28 @@ public class HighScoreManager : MonoBehaviour
                 AmountOFtadKilled++;
                 break;
             case "Spikepool":
-                amountofspikekillec++;
+                amountofspikekilled++;
                 break;
         }
-       
-        
+              
     }
 
-    public void HighScoreThisRound()
+    public void HighScoreThisRound(int waveindex)
     {
-        GameObject gam = GameObject.Find("EnemySpawnerManager");
-        WaveManager wav = gam.GetComponent<WaveManager>();
-        HighScore = (AmountOFtadKilled*PointsTad) + (amountofspikekillec*PointsSpike) + (amountofsnailkilled*PointsSnail) + (amountofFrogkilled*PointsFrog);
-        HighScore *= wav.waveIndex;
-        HighScore=HighScore * 100;
-        Debug.Log("HighScore "+HighScore);
-        GameObject.Find("HighScoreSetter").GetComponent<SetHighScore>().SetCurrentHighScore(HighScore);
+        HighScore = (amountofFrogkilled*PointsFrog)+(amountofsnailkilled*PointsSnail)+(AmountOFtadKilled*PointsTad)+(amountofspikekilled*PointsSpike);
+        HighScore = (HighScore * 100)*waveindex;
+        PlayerPrefs.SetInt("CurrentHighScore", HighScore);
+       
+        Debug.Log("MyHighScore: "+HighScore);
+
         AmountOFtadKilled = 0;
         amountofFrogkilled = 0;
-        amountofspikekillec = 0;
+        amountofspikekilled = 0;
         amountofsnailkilled = 0;
         HighScore = 0;
     }
+  
+
+   
 
 }
