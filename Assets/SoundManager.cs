@@ -7,7 +7,6 @@ public class SoundManager : MonoBehaviour
 {
     public AudioSource source;
     public AudioClip shootBubbleSound, shootBigBubbleSound, bubblePopSound, jumpSound, bubbleJumpSound, bubbleChargeSound, stepOnEnemy;
-    private float chargeTimer = 0;
 
     // Start is called before the first frame update
     void Start()
